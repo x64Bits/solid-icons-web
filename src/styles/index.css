@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[data-color-scheme="dark"] {
+  color-scheme: dark;
+}
+
+[data-color-scheme="light"] {
+  color-scheme: light;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #242424 inset !important;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+*,
+*:focus,
+*:hover {
+  outline: none;
+}
+
+.codeInput {
+  white-space: pre;
+  font-family: monospace;
+}
+
+pre,
+.pre {
+  border: none;
+}
+
+.side-panel {
+  max-height: calc(100vh - 4rem);
+}
+
+.search-container {
+  transition: height 250ms linear;
+}
+
+.toolbar {
+  transition: padding 250ms, height 250ms;
+}
+
+.pack-list .active > li {
+  background-color: #e5e5e5;
+}
+
+.dark .pack-list .active > li {
+  background-color: #1f2121;
+}
+
+.icon-preview {
+  min-width: 50%;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
