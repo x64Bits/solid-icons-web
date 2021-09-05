@@ -1,0 +1,7 @@
+export default {
+  a: {
+    stroke: 'none',
+    viewBox: '0 0 512 512'
+  },
+  c: '<title></title><path d="M336,112a80,80,0,0,0-160,0v96"></path><rect x="96" y="208" width="320" height="272" rx="48" ry="48"></rect>'
+}

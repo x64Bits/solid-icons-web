@@ -1,0 +1,1 @@
+import{u as r,i as a,j as o,t as s}from"./vendor.67a5c207.js";import{A as d}from"./index.94d18001.js";const e=s("<div></div>");function t(s){const[t]=r(d);return(()=>{const r=e.cloneNode(!0);return a(r,(()=>s.children)),o((()=>r.className=""+(t.darkMode?"dark bg-dark-bg":"bg-white"))),r})()}export{t as default};
