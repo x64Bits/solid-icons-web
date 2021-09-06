@@ -19,6 +19,7 @@ import IconPreview from "../../components/IconPreview"
 import { AppContext } from "../../utils/AppContext"
 import { getPackageData, searchByTerm } from "./helpers"
 import { SearchContext } from "../../components/Search/Context"
+import IconSkeleton from "../../components/IconSkeleton"
 
 const env = import.meta.env
 const SEARCH_SRC = env.DEV ? "/public" : ""
@@ -26,7 +27,8 @@ const SEARCH_SRC = env.DEV ? "/public" : ""
 export default function Icons() {
   const [searchResult, setSearchResult] = createSignal([])
   const [state] = useContext(AppContext)
-  const [_, { onSetResultCount, onToggleCompact }] = useContext(SearchContext)
+  const [searchState, { onSetResultCount, onToggleCompact }] =
+    useContext(SearchContext)
   const [pattern, setPattern] = createSignal("")
   const [pkg, setPkg] = createSignal()
 
@@ -84,9 +86,13 @@ export default function Icons() {
       >
         <Switch>
           <Match when={searchResult().length}>
-            <For each={searchResult()} fallback="">
+            <For each={searchResult()}>
               {(icon) => (
-                <Suspense>
+                <Suspense
+                  fallback={
+                    <IconSkeleton className="flex icon-container flex-col items-center justify-center h-32 w-36 mx-2 my-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-card-bg cursor-pointer text-light-text-secondary dark:text-dark-text-secondary" />
+                  }
+                >
                   <Icon
                     wrapperClass="flex icon-container flex-col items-center justify-center h-32 w-36 mx-2 my-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-card-bg cursor-pointer text-light-text-secondary dark:text-dark-text-secondary"
                     size="2.8rem"
@@ -99,7 +105,7 @@ export default function Icons() {
               )}
             </For>
           </Match>
-          <Match when={!searchResult().length}>
+          <Match when={!searchResult().length && !searchState.searching}>
             <div className="w-full flex flex-col justify-center items-center text-light-text-secondary">
               <BiSearchAlt className="text-6xl" />
               <span className="text-2xl mt-3 text-center">
