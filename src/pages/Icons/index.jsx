@@ -3,6 +3,7 @@ import {
   createSignal,
   For,
   Match,
+  onCleanup,
   Show,
   Suspense,
   Switch,
@@ -17,13 +18,15 @@ import Icon from "../../components/Icon"
 import IconPreview from "../../components/IconPreview"
 import { AppContext } from "../../utils/AppContext"
 import { getPackageData, searchByTerm } from "./helpers"
+import { SearchContext } from "../../components/Search/Context"
 
 const env = import.meta.env
 const SEARCH_SRC = env.DEV ? "/public" : ""
 
 export default function Icons() {
   const [searchResult, setSearchResult] = createSignal([])
-  const [state, { setIconsCount }] = useContext(AppContext)
+  const [state] = useContext(AppContext)
+  const [_, { onSetResultCount, onToggleCompact }] = useContext(SearchContext)
   const [pattern, setPattern] = createSignal("")
   const [pkg, setPkg] = createSignal()
 
@@ -34,10 +37,8 @@ export default function Icons() {
   const onFilterData = async (term) => {
     const data = await import(`${SEARCH_SRC}/search.js`).then((i) => i.default)
 
-    console.log(data)
-
     const { searchResult, pkg } = await searchByTerm(data.icons, term)
-    setIconsCount(searchResult.length)
+    onSetResultCount(searchResult.length)
     setSearchResult(searchResult)
 
     const hightlightPattern = new RegExp(`(${term})`, "i")
@@ -48,7 +49,10 @@ export default function Icons() {
     setPkg(pkgData)
   }
 
-  onMount(() => onFilterData(params.term))
+  onMount(() => {
+    onToggleCompact(true)
+    onFilterData(params.term)
+  })
 
   createEffect(() => onFilterData(params.term))
 

@@ -1,4 +1,10 @@
-export const isShowToolbar = location => location.pathname.includes("/search")
+export const isCompact = (location) => {
+  if (!location.pathname) {
+    return false
+  }
+
+  return location.pathname.includes("/search")
+}
 
 export function darkModeScrollbars(active) {
   document.documentElement.style.overflow = "hidden"
