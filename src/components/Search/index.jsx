@@ -1,6 +1,7 @@
 import { createEffect, Match, onMount, Switch, useContext } from "solid-js"
-import { IoCloseCircle, IoSearch } from "solid-icons/io"
+import { IoSearch } from "solid-icons/io"
 import { useLocation } from "solid-app-router"
+import { VscClose } from "solid-icons/vsc"
 
 import { isCompact } from "../../utils/context-helpers"
 import Spinner from "../Spinner"
@@ -59,10 +60,7 @@ export default function Search() {
 
   async function onSearch(event = "") {
     const value = event?.target?.value || event
-    const cleanValue = value.replace(
-      /[~`!@#$%^&*()+={}\[\];:\'\"<>.,\/\\\?-_]/g,
-      ""
-    )
+    const cleanValue = value.replace(/[/]/g, "")
 
     onSetTerm(cleanValue)
   }
@@ -97,7 +95,12 @@ export default function Search() {
           placeholder="Search icons (press / to focus)"
         />
         <Show when={state.term && !state.searching}>
-          <IoCloseCircle size="2em" onClick={onClearSearch} />
+          <VscClose
+            className="cursor-pointer"
+            size="1.5em"
+            onClick={onClearSearch}
+            aria-label="Clear search input"
+          />
         </Show>
       </div>
     </div>

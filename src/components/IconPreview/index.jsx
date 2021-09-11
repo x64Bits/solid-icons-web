@@ -1,8 +1,7 @@
-import { BsBagCheckFill } from "solid-icons/bs"
 import { onMount } from "solid-js"
 import { createSignal } from "solid-js"
 import { createEffect, useContext } from "solid-js"
-import { AppContext } from "../../utils/AppContext"
+import { AppContext } from "../../components/AppContext"
 import { createClickOutside } from "../../utils/createClickOutside"
 
 import CodeFragment from "../CodeFragment"
@@ -33,7 +32,7 @@ export default function IconPreview() {
       ref={previewEl}
       className={`${
         hide() ? "animate-slide-out" : "animate-slide-in"
-      } fixed bottom-6 icon-preview py-5  left-0 right-0 mr-auto ml-auto rounded-2xl flex items-center shadow-lg bg-white dark:bg-dark-card-bg dark:border-dark-card-border border border-theme-border`}
+      } fixed bottom-6 icon-preview py-5 left-0 right-0 md:mr-auto md:ml-auto mx-3 rounded-2xl flex items-center flex-col md:flex-row md:mx-0 shadow-lg bg-white dark:bg-dark-card-bg dark:border-dark-card-border border border-theme-border`}
     >
       <Icon
         wrapperClass="flex flex-col items-center justify-center h-32 w-36 mx-2 my-2 rounded-lg text-light-text-secondary dark:text-dark-text-secondary"

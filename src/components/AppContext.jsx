@@ -1,21 +1,21 @@
 import { createContext, createEffect } from "solid-js"
 import { createStore } from "solid-js/store"
 
-import createLocalStorage from "./createLocalStorage"
-import { darkModeScrollbars } from "./context-helpers"
+import createLocalStorage from "../utils/createLocalStorage"
+import { darkModeScrollbars } from "../utils/context-helpers"
 
 export const AppContext = createContext([
-  { withToolbar: false, iconsCount: 0, iconPreview: null, darkMode: false },
-  {}
+  { openSidepanel: false, iconsCount: 0, iconPreview: null, darkMode: false },
+  {},
 ])
 
 export default function AppContextProvider(props) {
   const [storedDarkMode, setDarkMode] = createLocalStorage("darkMode", false)
   const [state, setState] = createStore({
-    withToolbar: false,
+    openSidepanel: false,
     iconsCount: 0,
     iconPreview: null,
-    darkMode: storedDarkMode
+    darkMode: storedDarkMode,
   })
 
   createEffect(() => {
@@ -25,8 +25,8 @@ export default function AppContextProvider(props) {
   const store = [
     state,
     {
-      handleToggleToolbar(newValue) {
-        setState("withToolbar", newValue)
+      onToggleSidepanel(newValue) {
+        setState("openSidepanel", newValue)
       },
       setIconsCount(quantity) {
         setState("iconsCount", quantity)
@@ -37,8 +37,8 @@ export default function AppContextProvider(props) {
       onToggleDarkMode() {
         setState("darkMode", !state.darkMode)
         setDarkMode(!storedDarkMode)
-      }
-    }
+      },
+    },
   ]
 
   return (

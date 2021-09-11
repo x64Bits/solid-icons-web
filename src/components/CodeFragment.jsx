@@ -1,4 +1,4 @@
-import { BsCheckLg } from "solid-icons/bs"
+import { FiCheck } from "solid-icons/fi"
 import { IoCopy } from "solid-icons/io"
 import { createEffect, Match, Switch } from "solid-js"
 import Prism from "prismjs"
@@ -10,7 +10,7 @@ export default function CodeFragment(props) {
   const [copied, setCopied] = createSignal(false)
   const [code, setCode] = createSignal(props.code)
 
-  createEffect(prev => {
+  createEffect((prev) => {
     if (props.code !== prev) {
       const formatCode = Prism.highlight(
         props.code,
@@ -45,7 +45,12 @@ export default function CodeFragment(props) {
       >
         <Switch>
           <Match when={copied()}>
-            <BsCheckLg className="animate-fade-in" />
+            <div className="flex flex-row justify-center items-center">
+              <span className="mr-1 text-xs text-light-text-secondary dark:text-dark-text-secondary">
+                Copied!
+              </span>
+              <FiCheck className="animate-fade-in" />
+            </div>
           </Match>
           <Match when={!copied()}>
             <IoCopy className="animate-fade-in" />

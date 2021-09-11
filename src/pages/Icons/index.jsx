@@ -3,7 +3,6 @@ import {
   createSignal,
   For,
   Match,
-  onCleanup,
   Show,
   Suspense,
   Switch,
@@ -16,7 +15,7 @@ import { BiSearchAlt } from "solid-icons/bi"
 
 import Icon from "../../components/Icon"
 import IconPreview from "../../components/IconPreview"
-import { AppContext } from "../../utils/AppContext"
+import { AppContext } from "../../components/AppContext"
 import { getPackageData, searchByTerm } from "./helpers"
 import { SearchContext } from "../../components/Search/Context"
 import IconSkeleton from "../../components/IconSkeleton"
@@ -25,14 +24,13 @@ const env = import.meta.env
 const SEARCH_SRC = env.DEV ? "/public" : ""
 
 export default function Icons() {
+  let iconsRoot
   const [searchResult, setSearchResult] = createSignal([])
   const [state] = useContext(AppContext)
   const [searchState, { onSetResultCount, onToggleCompact }] =
     useContext(SearchContext)
   const [pattern, setPattern] = createSignal("")
   const [pkg, setPkg] = createSignal()
-
-  let iconsRoot
 
   const params = useParams()
 
@@ -52,7 +50,6 @@ export default function Icons() {
   }
 
   onMount(() => {
-    onToggleCompact(true)
     onFilterData(params.term)
   })
 
@@ -61,7 +58,7 @@ export default function Icons() {
   return (
     <>
       <Show when={pkg()}>
-        <div className="flex flex-col mx-4 mt-4 mb-2 text-light-text-secondary dark:text-dark-text-secondary">
+        <div className="w-full flex flex-col items-start px-10 mt-4 mb-2 text-light-text-secondary dark:text-dark-text-secondary">
           <h2 className="text-3xl text-light-text-secondary dark:text-dark-text-secondary mb-1">
             {pkg().name}
           </h2>
@@ -72,6 +69,7 @@ export default function Icons() {
             <a
               href={pkg().sourceUrl}
               target="_blank"
+              rel="noreferrer noopener"
               className="flex flex-row items-center"
             >
               Repository
@@ -81,7 +79,7 @@ export default function Icons() {
         </div>
       </Show>
       <div
-        className="flex flex-row flex-wrap w-full max-w-full overflow-x-hidden pt-8 relative"
+        className="flex flex-row flex-wrap w-full max-w-full overflow-x-hidden pt-8 relative justify-center"
         ref={iconsRoot}
       >
         <Switch>

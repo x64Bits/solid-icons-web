@@ -16,7 +16,7 @@ module.exports = {
 
         "dark-bg": "#18191A",
         "dark-text-primary": "#D1D1D1",
-        "dark-text-secondary": "#9C9C9C",
+        "dark-text-secondary": "#A6A6A6",
         "dark-card-bg": "#242424",
         "dark-card-border": "#373737",
         "dark-separators": "#1F2121",
@@ -26,9 +26,9 @@ module.exports = {
       animation: {
         "fade-in": "fadeIn 350ms ease-in",
         "slide-in":
-          "250ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s 1 normal both running slideIn",
+          "300ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s 1 normal both running slideIn",
         "slide-out":
-          "250ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s 1 normal both running slideOut",
+          "280ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s 1 normal both running slideOut",
       },
     },
   },

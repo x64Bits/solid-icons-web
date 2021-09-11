@@ -8,7 +8,7 @@ import {
 import { BsSquareFill as DefaultIcon } from "solid-icons/bs"
 import { createViewportObserver } from "../utils/createInterception"
 import IconTemplate from "solid-icons/esm/IconWrapper"
-import { AppContext } from "../utils/AppContext"
+import { AppContext } from "../components/AppContext"
 
 const env = import.meta.env
 
@@ -37,7 +37,7 @@ export function Icon(props) {
   return (
     <Suspense fallback={<DefaultIcon />}>
       {iconString() && (
-        <div className="animate-fade-in">
+        <div>
           <IconTemplate src={iconString()} {...props} />
         </div>
       )}
@@ -49,7 +49,7 @@ export default function IconContainer(props) {
   const [name, setName] = createSignal()
   const [renderName, setRenderName] = createSignal()
   const [visible, setVisible] = createSignal(false)
-  const [add] = createViewportObserver([], 0.5)
+  const [add] = createViewportObserver([], 0.1)
   const [_, { onSetIconPreview }] = useContext(AppContext)
 
   // const [local, rest] = splitProps(props, ["name"])
