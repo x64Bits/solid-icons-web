@@ -4,7 +4,7 @@ import { useContext } from "solid-js"
 import { AppContext } from "../components/AppContext"
 
 import Navbar from "./Navbar"
-const Sidepanel = lazy(() => import("./Sidepanel"))
+import Sidepanel from "./Sidepanel"
 const Toolbar = lazy(() => import("./Toolbar"))
 const MainContainer = lazy(() => import("./MainContainer"))
 

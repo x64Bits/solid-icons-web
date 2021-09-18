@@ -19,27 +19,26 @@ import { AppContext } from "../../components/AppContext"
 import { getPackageData, searchByTerm } from "./helpers"
 import { SearchContext } from "../../components/Search/Context"
 import IconSkeleton from "../../components/IconSkeleton"
+import IconsSkeleton from "../../components/IconsSkeleton"
 
 const env = import.meta.env
 const SEARCH_SRC = env.DEV ? "/public" : ""
 
 export default function Icons() {
-  let iconsRoot
   const [searchResult, setSearchResult] = createSignal([])
   const [state] = useContext(AppContext)
-  const [searchState, { onSetResultCount, onToggleCompact }] =
-    useContext(SearchContext)
+  const [_, { onSetResultCount }] = useContext(SearchContext)
+  const [searching, setSearching] = createSignal(true)
   const [pattern, setPattern] = createSignal("")
   const [pkg, setPkg] = createSignal()
 
   const params = useParams()
 
   const onFilterData = async (term) => {
+    setSearching(true)
     const data = await import(`${SEARCH_SRC}/search.js`).then((i) => i.default)
 
-    const { searchResult, pkg } = await searchByTerm(data.icons, term)
-    onSetResultCount(searchResult.length)
-    setSearchResult(searchResult)
+    const { result, pkg } = await searchByTerm(data.icons, term)
 
     const hightlightPattern = new RegExp(`(${term})`, "i")
     setPattern(() => hightlightPattern)
@@ -47,6 +46,12 @@ export default function Icons() {
     const pkgData = await getPackageData(pkg)
 
     setPkg(pkgData)
+
+    onSetResultCount(result.length)
+
+    setSearchResult(result)
+
+    setSearching(false)
   }
 
   onMount(() => {
@@ -78,10 +83,7 @@ export default function Icons() {
           </p>
         </div>
       </Show>
-      <div
-        className="flex flex-row flex-wrap w-full max-w-full overflow-x-hidden pt-8 relative justify-center"
-        ref={iconsRoot}
-      >
+      <div className="flex flex-row flex-wrap w-full max-w-full overflow-x-hidden pt-8 relative justify-center">
         <Switch>
           <Match when={searchResult().length}>
             <For each={searchResult()}>
@@ -97,13 +99,12 @@ export default function Icons() {
                     className="icon-svg"
                     pattern={pattern()}
                     name={icon}
-                    iconsRoot={iconsRoot}
                   />
                 </Suspense>
               )}
             </For>
           </Match>
-          <Match when={!searchResult().length && !searchState.searching}>
+          <Match when={!searchResult().length && !searching()}>
             <div className="w-full flex flex-col justify-center items-center text-light-text-secondary">
               <BiSearchAlt className="text-6xl" />
               <span className="text-2xl mt-3 text-center">
@@ -112,6 +113,9 @@ export default function Icons() {
             </div>
           </Match>
         </Switch>
+        <Show when={searching()}>
+          <IconsSkeleton count={20} />
+        </Show>
         <Show when={state.iconPreview}>
           <IconPreview />
         </Show>

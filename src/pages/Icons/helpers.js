@@ -17,18 +17,18 @@ export async function searchByTerm(data, term) {
   if (ISPKG(subTerm)) {
     const pkg = getPkg(term)
 
-    const searchResult = data.filter(
+    const result = data.filter(
       (iconName) => iconName.toLowerCase().substring(0, 2) === pkg
     )
 
-    return { searchResult, pkg }
+    return { result, pkg }
   }
 
-  const searchResult = data.filter((iconName) =>
+  const result = data.filter((iconName) =>
     iconName.toLowerCase().includes(term.toLowerCase())
   )
 
-  return { searchResult }
+  return { result }
 }
 
 export async function getPackageData(ID) {

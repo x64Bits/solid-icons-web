@@ -1,14 +1,10 @@
-import { NavLink } from "solid-app-router"
-import { createEffect, createSignal, For, onMount, useContext } from "solid-js"
-import { AppContext } from "../components/AppContext"
-import { createClickOutside } from "../utils/createClickOutside"
-
-const env = import.meta.env
-const METADATA_SRC = env.DEV ? "/public" : ""
+import { onMount, useContext } from "solid-js"
+import { AppContext } from "../AppContext"
+import { createClickOutside } from "../../utils/createClickOutside"
+import Items from "./Items"
 
 export default function Sidepanel() {
   let panelRef
-  const [packs, setPacks] = createSignal([])
   const [state, { onToggleSidepanel }] = useContext(AppContext)
 
   function onHide() {
@@ -16,17 +12,6 @@ export default function Sidepanel() {
   }
 
   onMount(() => createClickOutside(panelRef, () => onHide()))
-
-  onMount(async () => {
-    const metadataPath = `${METADATA_SRC}/meta.js`
-    const metadata = await import(metadataPath).then((i) => i.default)
-
-    setPacks(metadata || [])
-  })
-
-  function handleToggleSidepanel() {
-    onToggleSidepanel(!state.openSidepanel)
-  }
 
   return (
     <div
@@ -45,21 +30,7 @@ export default function Sidepanel() {
         >
           <ul className="pack-list">
             <li className="font-bold pl-5 pb-3">Collections</li>
-            <For each={packs()}>
-              {(pack) => (
-                <li className="flex">
-                  <NavLink
-                    className="px-3 py-2 mx-3 cursor-pointer rounded-md hover:bg-flat-card hover:border-theme-border"
-                    replace={true}
-                    href={`/search/pkg:${pack.path}`}
-                    onClick={onHide}
-                  >
-                    {" "}
-                    {pack.name}
-                  </NavLink>
-                </li>
-              )}
-            </For>
+            <Items onHide={onHide} />
           </ul>
         </aside>
       </div>

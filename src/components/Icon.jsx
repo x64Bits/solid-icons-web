@@ -2,6 +2,7 @@ import {
   createEffect,
   createSignal,
   Show,
+  splitProps,
   Suspense,
   useContext,
 } from "solid-js"
@@ -52,9 +53,7 @@ export default function IconContainer(props) {
   const [add] = createViewportObserver([], 0.1)
   const [_, { onSetIconPreview }] = useContext(AppContext)
 
-  // const [local, rest] = splitProps(props, ["name"])
-
-  // createEffect(() => console.log({ local, rest }))
+  const [meta, iconProps] = splitProps(props, ["wrapperClass", "pattern"])
 
   const observer = (el, entry) => {
     const [getter, setter] = entry()
@@ -77,10 +76,10 @@ export default function IconContainer(props) {
   }
 
   createEffect(() => {
-    const highlighted = highlightedName(props.name, props.pattern)
+    const highlighted = highlightedName(iconProps.name, meta.pattern)
 
     setRenderName(highlighted)
-    setName(props.name)
+    setName(iconProps.name)
   })
 
   function onClick() {
@@ -89,12 +88,12 @@ export default function IconContainer(props) {
 
   return (
     <div
-      className={props.wrapperClass}
+      className={meta.wrapperClass}
       onClick={onClick}
       use:observer={[visible, setVisible]}
     >
       <Show when={visible()}>
-        <Icon {...props} />
+        <Icon {...iconProps} />
         <span
           className="text-sm mt-2 w-24 break-words text-center icon-name"
           innerHTML={renderName() ? renderName() : "Loading..."}
