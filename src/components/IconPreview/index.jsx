@@ -50,7 +50,7 @@ export default function IconPreview() {
           />
         </div>
         <span className="text-light-text-secondary dark:text-dark-text-secondary text-sm">
-          Import icon from library
+          Render the icon
         </span>
         <div className="relative max-w-lg">
           <CodeFragment code={templateRender(iconName())} language="jsx" />
