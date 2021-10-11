@@ -6,7 +6,7 @@ export default function RecentlySearch(props) {
   const [searchState] = useContext(SearchContext)
 
   return (
-    <Show when={props.show}>
+    <Show when={props.show && searchState.recentlySearched.length}>
       <div className="text-light-text-primary dark:text-dark-text-primary">
         <div className="flex flex-row items-center justify-start">
           <div className="mr-1">
