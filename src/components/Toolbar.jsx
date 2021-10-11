@@ -2,10 +2,11 @@ import { useLocation } from "solid-app-router"
 import { lazy, Show } from "solid-js"
 import { useContext } from "solid-js"
 import { AiFillSetting } from "solid-icons/ai"
+import { createEffect } from "solid-js"
 
 import IconsCount from "./IconsCount"
-import { createEffect } from "solid-js"
 import { SearchContext } from "./Search/Context"
+import RecentlySearch from "./RecentlySearch"
 
 const Search = lazy(() => import("./Search"))
 
@@ -31,7 +32,10 @@ export default function Toolbar() {
       <Show when={location.pathname.includes("/search")}>
         <IconsCount count={state.resultCount} />
       </Show>
-      <Search />
+      <div className="flex flex-col">
+        <Search />
+        <RecentlySearch show={!location.pathname.includes("/search")} />
+      </div>
       <Show when={location.pathname.includes("/search")}>
         <div className="w-52 hidden md:flex justify-end opacity-0 cursor-default">
           <button className="border cursor-default dark:border-dark-separators rounded-md flex flex-row items-center text-light-text-secondary dark:text-dark-secondary px-6 py-1 text-lg">

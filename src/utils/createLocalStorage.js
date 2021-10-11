@@ -1,7 +1,7 @@
 import { createEffect } from "solid-js"
 import { createSignal } from "solid-js"
 
-function getInitialState(key, initialValue) {
+export function getSavedKey(key, initialValue) {
   try {
     // Get from local storage by key
     const item = window.localStorage.getItem(key)
@@ -19,13 +19,13 @@ function createLocalStorage(key, initialValue) {
   // State to store our value
   // Pass initial state function to useState so logic is only executed once
   const [storedValue, setStoredValue] = createSignal(
-    getInitialState(key, initialValue)
+    getSavedKey(key, initialValue)
   )
 
-  createEffect(() => setStoredValue(getInitialState(key, initialValue)))
+  createEffect(() => setStoredValue(getSavedKey(key, initialValue)))
   // Return a wrapped version of useState's setter function that ...
   // ... persists the new value to localStorage.
-  const setValue = value => {
+  const setValue = (value) => {
     try {
       // Allow value to be a function so we have same API as useState
       const valueToStore =

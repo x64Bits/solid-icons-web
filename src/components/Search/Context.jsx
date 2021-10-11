@@ -1,8 +1,10 @@
 import { useNavigate } from "solid-app-router"
-import { createContext } from "solid-js"
+import { createContext, createEffect } from "solid-js"
 import { createStore } from "solid-js/store"
 
 import createDebounce from "../../utils/createDebounce"
+import createLocalStorage from "../../utils/createLocalStorage"
+import { saveLocalSearches } from "../../utils/save-searches"
 
 export const SearchContext = createContext([
   {
@@ -11,19 +13,24 @@ export const SearchContext = createContext([
     result: [],
     resultCount: 0,
     compactView: false,
+    recentlySearched: [],
   },
   {},
 ])
 
 export default function SearchContextProvider(props) {
   const navigate = useNavigate()
+  const [localSearches] = createLocalStorage("searches", [])
   const [state, setState] = createStore({
     term: null,
     searching: false,
     result: [],
     resultCount: 0,
     compactView: false,
+    recentlySearched: [],
   })
+
+  createEffect(() => setState("recentlySearched", localSearches))
 
   const handleNavigate = () => {
     setState("searching", false)
@@ -54,6 +61,10 @@ export default function SearchContextProvider(props) {
       },
       onToggleCompact(newValue) {
         setState("compactView", newValue)
+      },
+      onSaveSearch(term) {
+        const newPayload = saveLocalSearches(term)
+        setState("recentlySearched", newPayload)
       },
     },
   ]
