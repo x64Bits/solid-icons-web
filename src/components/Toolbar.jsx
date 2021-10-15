@@ -13,7 +13,7 @@ const Search = lazy(() => import("./Search"))
 const tollbarBaseStyles =
   "flex md:flex-row items-center toolbar text-light-text-secondary"
 
-const compactView = `${tollbarBaseStyles} lg:w-3/6 h-32 md:px-6 px-8 md:px-10 justify-center`
+const compactView = `${tollbarBaseStyles} lg:w-3/6 h-40 md:px-6 px-8 md:px-10 justify-center`
 
 const fullView = `${tollbarBaseStyles} flex-col-reverse py-4 sm:pb-1 md:pb-4 h-auto md:h-16 px-8 border-b border-theme-border dark:border-dark-separators w-full justify-between`
 

@@ -8,7 +8,7 @@ export function saveLocalSearches(term) {
 
   currentSearches.length >= 5 && currentSearches.pop()
 
-  currentSearches.push(term)
+  currentSearches.unshift(term)
 
   const newSearches = [...new Set(currentSearches)]
 

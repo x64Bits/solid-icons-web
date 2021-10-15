@@ -1,17 +1,27 @@
-import { onMount, useContext } from "solid-js"
+import { createSignal, For, onMount, useContext } from "solid-js"
+
 import { AppContext } from "../AppContext"
 import { createClickOutside } from "../../utils/createClickOutside"
-import Items from "./Items"
+import Item from "./Item"
+import ItemsSkeleton from "./ItemsSkeleton"
+import { getPackMetadata } from "./contants"
 
 export default function Sidepanel() {
   let panelRef
   const [state, { onToggleSidepanel }] = useContext(AppContext)
+  const [packs, setPacks] = createSignal([])
 
   function onHide() {
     state.openSidepanel && onToggleSidepanel(false)
   }
 
-  onMount(() => createClickOutside(panelRef, () => onHide()))
+  onMount(async () => {
+    createClickOutside(panelRef, () => onHide())
+
+    const packMetadata = (await getPackMetadata()) || []
+
+    setPacks(packMetadata)
+  })
 
   return (
     <div
@@ -30,7 +40,11 @@ export default function Sidepanel() {
         >
           <ul className="pack-list">
             <li className="font-bold pl-5 pb-3">Collections</li>
-            <Items onHide={onHide} />
+            <For each={packs()} fallback={<ItemsSkeleton />}>
+              {(item) => (
+                <Item onHide={onHide} name={item.name} path={item.path} />
+              )}
+            </For>
           </ul>
         </aside>
       </div>
