@@ -20,6 +20,8 @@ import { getPackageData, searchByTerm } from "./helpers"
 import { SearchContext } from "../../components/Search/Context"
 import IconSkeleton from "../../components/IconSkeleton"
 import IconsSkeleton from "../../components/IconsSkeleton"
+import createLocalStorage from "../../utils/createLocalStorage"
+import { saveLocalSearches } from "../../utils/save-searches"
 
 const env = import.meta.env
 const SEARCH_SRC = env.DEV ? "/public" : ""
@@ -27,7 +29,8 @@ const SEARCH_SRC = env.DEV ? "/public" : ""
 export default function Icons() {
   const [searchResult, setSearchResult] = createSignal([])
   const [state] = useContext(AppContext)
-  const [_, { onSetResultCount }] = useContext(SearchContext)
+  const [_, { onSetResultCount, onSaveSearch }] = useContext(SearchContext)
+
   const [searching, setSearching] = createSignal(true)
   const [pattern, setPattern] = createSignal("")
   const [pkg, setPkg] = createSignal()
@@ -37,6 +40,8 @@ export default function Icons() {
   const onFilterData = async (term) => {
     setSearching(true)
     const data = await import(`${SEARCH_SRC}/search.js`).then((i) => i.default)
+
+    onSaveSearch(term)
 
     const { result, pkg } = await searchByTerm(data.icons, term)
 
