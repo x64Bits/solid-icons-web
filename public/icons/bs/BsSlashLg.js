@@ -4,5 +4,5 @@ export default {
     fill: 'currentColor',
     viewBox: '0 0 16 16'
   },
-  c: '<path d="M14.707 1.293a1 1 0 0 1 0 1.414l-12 12a1 1 0 0 1-1.414-1.414l12-12a1 1 0 0 1 1.414 0z"></path>'
+  c: '<path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"></path>'
 }

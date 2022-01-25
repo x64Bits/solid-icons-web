@@ -21,22 +21,6 @@ export default function Search() {
 
   const location = useLocation()
 
-  function toggleStyles(isSearch) {
-    if (containerRef) {
-      containerRef.className = !isSearch ? fullView : compactView
-    }
-  }
-
-  onMount(() => {
-    const isSearch = location.pathname.includes("/search")
-    toggleStyles(isSearch)
-  })
-
-  createEffect(() => {
-    const isSearch = location.pathname.includes("/search")
-    toggleStyles(isSearch)
-  })
-
   createEffect(() => {
     document.addEventListener("keyup", (event) => {
       const keyName = event.key
@@ -72,7 +56,7 @@ export default function Search() {
 
   return (
     <div className="flex justify-center items-center w-full">
-      <div ref={containerRef}>
+      <div class={state.compactView ? compactView : fullView}>
         <Switch>
           <Match when={state.searching}>
             <Spinner />

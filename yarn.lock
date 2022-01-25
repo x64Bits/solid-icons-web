@@ -1111,15 +1111,20 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-solid-app-router@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/solid-app-router/-/solid-app-router-0.1.5.tgz#565f128ba08796988e7dc736f680b82e547c22b2"
-  integrity sha512-8wxpBP1pOea4rQFba1NH6uyPFBvqcSxHB4i9dSuoQw5OABgecvrFfAe+0TbYCP/7OhJ9RcEfsej+LBEdE/YS0Q==
+solid-app-router@0.1.14:
+  version "0.1.14"
+  resolved "https://registry.yarnpkg.com/solid-app-router/-/solid-app-router-0.1.14.tgz#2ffb1bfbb7db7d9d1cd81be5aec1eb786b961573"
+  integrity sha512-fnX+jCB5sDMbjq3od9qGtQNdlvHP2c6DG5STvMHVXyNuSEN+MdO7WJtZ58OpVpq6zWS4FYeYAh7NMEa7C2CcOA==
 
-solid-icons@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/solid-icons/-/solid-icons-0.3.0.tgz#f5dd64225f8623b97b05062c18d93c21a34a9798"
-  integrity sha512-kYSU+YyvjGjlLyvDkj1WAG4GiJJtWBaYDOhFqTjxwdDzDGs3BrOdKtFdRMieWUUb6P83uHznNphW5XZplzIsPA==
+solid-icons@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/solid-icons/-/solid-icons-0.3.2.tgz#70c6f310c0e34bf17544aa98a1aaedf8021482b8"
+  integrity sha512-pS5HkaI0nVLxAXQ+JVIz9hIJy4COO+3dLptP+3ifHoX1FvTU//3E8/G0PQjUCIHrscgqantGtmazGKWjsnNE3Q==
+
+solid-js@1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.2.6.tgz#54e91ecb78bb6cc78efea2f05f979f6aa71b25ef"
+  integrity sha512-NvPHJ5Vj5f+ZJWIioickrC55seovSkDtm5NzSpnoUk3z4tATv0STpy5iuGNEn51ZORUcwpZzrMAtOCGziXU1XA==
 
 solid-js@^1.1.1:
   version "1.1.2"

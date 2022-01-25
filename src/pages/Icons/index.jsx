@@ -8,7 +8,7 @@ import {
   Switch,
   useContext,
 } from "solid-js"
-import { onMount } from "solid-js"
+import { onMount, onCleanup } from "solid-js"
 import { createEffect } from "solid-js"
 import { FiExternalLink } from "solid-icons/fi"
 import { BiSearchAlt } from "solid-icons/bi"
@@ -20,8 +20,6 @@ import { getPackageData, searchByTerm } from "./helpers"
 import { SearchContext } from "../../components/Search/Context"
 import IconSkeleton from "../../components/IconSkeleton"
 import IconsSkeleton from "../../components/IconsSkeleton"
-import createLocalStorage from "../../utils/createLocalStorage"
-import { saveLocalSearches } from "../../utils/save-searches"
 
 const env = import.meta.env
 const SEARCH_SRC = env.DEV ? "/public" : ""
@@ -29,7 +27,8 @@ const SEARCH_SRC = env.DEV ? "/public" : ""
 export default function Icons() {
   const [searchResult, setSearchResult] = createSignal([])
   const [state] = useContext(AppContext)
-  const [_, { onSetResultCount, onSaveSearch }] = useContext(SearchContext)
+  const [_, { onSetResultCount, onSaveSearch, onToggleCompact }] =
+    useContext(SearchContext)
 
   const [searching, setSearching] = createSignal(true)
   const [pattern, setPattern] = createSignal("")
@@ -60,8 +59,11 @@ export default function Icons() {
   }
 
   onMount(() => {
+    onToggleCompact(true)
     onFilterData(params.term)
   })
+
+  onCleanup(() => onToggleCompact(false))
 
   createEffect(() => onFilterData(params.term))
 

@@ -3,8 +3,27 @@ import { createSignal } from "solid-js"
 import CodeFragment from "../CodeFragment"
 import { basicUsage, installPackage } from "./constants"
 
+const DEFAULT_PACKAGE_MANAGER = "yarn"
+
+const PackageManager = (props) => {
+  const handleSet = () => props.onSet(props.manager)
+
+  return (
+    <span
+      onClick={handleSet}
+      className={`${
+        props.userManager() === props.manager
+          ? "underline cursor-default"
+          : "cursor-pointer"
+      } ml-3 text-light-text-secondary dark:text-dark-text-secondary`}
+    >
+      {props.manager}
+    </span>
+  )
+}
+
 export default function Onboarding() {
-  const [userManager, setUserManager] = createSignal("yarn")
+  const [userManager, setUserManager] = createSignal(DEFAULT_PACKAGE_MANAGER)
 
   const onSetManager = (selected) => setUserManager(selected)
 
@@ -16,7 +35,8 @@ export default function Onboarding() {
         </h2>
         <p className="text-light-text-secondary dark:text-dark-text-secondary px-4 md:px-32">
           A collection of <b>12</b> open source icon libraries packed into one
-          for easy use in your solidjs project with over <b>13744</b> icons.
+          for easy use in your <b>SolidJS</b> project with over <b>14142</b>{" "}
+          icons.
         </p>
         <div className="flex flex-col text-left mt-10">
           <div className="flex flex-row justify-between">
@@ -25,16 +45,12 @@ export default function Onboarding() {
             </p>
             <div>
               {Object.keys(installPackage).map((manager) => (
-                <span
-                  onClick={() => onSetManager(manager)}
-                  className={`${
-                    userManager() === manager
-                      ? "underline cursor-default"
-                      : "cursor-pointer"
-                  } ml-3 text-light-text-secondary dark:text-dark-text-secondary`}
-                >
-                  {manager}
-                </span>
+                <PackageManager
+                  manager={manager}
+                  key={manager}
+                  userManager={userManager}
+                  onSet={onSetManager}
+                />
               ))}
             </div>
           </div>
