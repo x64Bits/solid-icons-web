@@ -3,5 +3,5 @@ export default {
     stroke: 'none',
     viewBox: '0 0 512 512'
   },
-  c: '<title></title><polygon points="237.65 176.1 144 176.1 144 335.9 237.65 335.9 368 440 368 72 237.65 176.1"></polygon>'
+  c: '<path d="M237.65 176.1H144v159.8h93.65L368 440V72L237.65 176.1z"/>'
 }

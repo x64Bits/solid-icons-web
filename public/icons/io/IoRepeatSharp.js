@@ -3,5 +3,5 @@ export default {
     stroke: 'none',
     viewBox: '0 0 512 512'
   },
-  c: '<title></title><polyline points="320 120 368 168 320 216"></polyline><polyline points="352 168 64 168 64 264"></polyline><polyline points="192 392 144 344 192 296"></polyline><polyline points="160 344 448 344 448 248"></polyline>'
+  c: '<path d="M320 120l48 48-48 48"/><path d="M352 168H64v96M192 392l-48-48 48-48"/><path d="M160 344h288v-96"/>'
 }

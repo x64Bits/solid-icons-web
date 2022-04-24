@@ -5,6 +5,7 @@ import { AiFillSetting } from "solid-icons/ai"
 import IconsCount from "./IconsCount"
 import { SearchContext } from "./Search/Context"
 import RecentlySearch from "./RecentlySearch"
+import { AppContext } from "../components/AppContext"
 
 const Search = lazy(() => import("./Search"))
 
@@ -17,6 +18,9 @@ const compactView = `${tollbarBaseStyles} flex-col-reverse py-4 sm:pb-1 md:pb-4 
 
 export default function Toolbar() {
   const [state] = useContext(SearchContext)
+  const [_, { onToggleCustomizer }] = useContext(AppContext)
+
+  const handleToggleCustomizer = () => onToggleCustomizer()
 
   return (
     <div class={state.compactView ? compactView : fullView}>
@@ -28,8 +32,12 @@ export default function Toolbar() {
         <RecentlySearch show={!state.compactView} />
       </div>
       <Show when={state.compactView}>
-        <div className="w-52 hidden md:flex justify-end opacity-0 cursor-default">
-          <button className="border cursor-default dark:border-dark-separators rounded-md flex flex-row items-center text-light-text-secondary dark:text-dark-secondary px-6 py-1 text-lg">
+        <div className="w-52 md:flex justify-end opacity-0">
+          <button
+            onClick={handleToggleCustomizer}
+            type="button"
+            className="border cursor-pointer dark:border-dark-card-border rounded-md flex flex-row items-center text-light-text-primary dark:text-dark-text-secondary px-6 py-1 text-lg"
+          >
             <AiFillSetting className="mr-2" /> Settings
           </button>
         </div>

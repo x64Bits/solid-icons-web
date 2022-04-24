@@ -3,5 +3,5 @@ export default {
     stroke: 'none',
     viewBox: '0 0 512 512'
   },
-  c: '<title></title><circle cx="256" cy="256" r="32"></circle><circle cx="256" cy="416" r="32"></circle><circle cx="256" cy="96" r="32"></circle>'
+  c: '<title></title><circle fill="none" stroke="currentColor" stroke-width="32"  cx="256" cy="256" r="32"></circle><circle fill="none" stroke="currentColor" stroke-width="32"  cx="256" cy="416" r="32"></circle><circle fill="none" stroke="currentColor" stroke-width="32"  cx="256" cy="96" r="32"></circle>'
 }

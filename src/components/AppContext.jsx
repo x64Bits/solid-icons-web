@@ -5,7 +5,13 @@ import createLocalStorage from "../utils/createLocalStorage"
 import { darkModeScrollbars } from "../utils/context-helpers"
 
 export const AppContext = createContext([
-  { openSidepanel: false, iconsCount: 0, iconPreview: null, darkMode: false },
+  {
+    openSidepanel: false,
+    iconsCount: 0,
+    iconPreview: null,
+    darkMode: false,
+    openCustomizer: false,
+  },
   {},
 ])
 
@@ -16,6 +22,7 @@ export default function AppContextProvider(props) {
     iconsCount: 0,
     iconPreview: null,
     darkMode: storedDarkMode,
+    openCustomizer: false,
   })
 
   createEffect(() => {
@@ -37,6 +44,9 @@ export default function AppContextProvider(props) {
       onToggleDarkMode() {
         setState("darkMode", !state.darkMode)
         setDarkMode(!storedDarkMode)
+      },
+      onToggleCustomizer() {
+        setState("openCustomizer", !state.openCustomizer)
       },
     },
   ]

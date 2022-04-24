@@ -3,5 +3,5 @@ export default {
     stroke: 'none',
     viewBox: '0 0 512 512'
   },
-  c: '<title></title><path d="M16,464,496,256,16,48V208l320,48L16,304Z"></path>'
+  c: '<path d="M16 464l480-208L16 48v160l320 48-320 48z"/>'
 }

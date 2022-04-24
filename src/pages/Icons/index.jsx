@@ -20,6 +20,7 @@ import { getPackageData, searchByTerm } from "./helpers"
 import { SearchContext } from "../../components/Search/Context"
 import IconSkeleton from "../../components/IconSkeleton"
 import IconsSkeleton from "../../components/IconsSkeleton"
+import Customizer from "../../components/Customizer"
 
 const env = import.meta.env
 const SEARCH_SRC = env.DEV ? "/public" : ""
@@ -125,6 +126,9 @@ export default function Icons() {
         </Show>
         <Show when={state.iconPreview}>
           <IconPreview />
+        </Show>
+        <Show when={state.openCustomizer}>
+          <Customizer />
         </Show>
       </div>
     </>
