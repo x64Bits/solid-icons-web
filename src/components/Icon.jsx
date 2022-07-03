@@ -8,7 +8,7 @@ import {
 } from "solid-js"
 import { BsSquareFill as DefaultIcon } from "solid-icons/bs"
 import { createViewportObserver } from "../utils/createInterception"
-import IconTemplate from "solid-icons/esm/IconWrapper"
+import { IconTemplate } from "solid-icons/lib/browser/IconWrapper"
 import { AppContext } from "../components/AppContext"
 
 const env = import.meta.env
@@ -37,11 +37,7 @@ export function Icon(props) {
 
   return (
     <Suspense fallback={<DefaultIcon />}>
-      {iconString() && (
-        <div>
-          <IconTemplate src={iconString()} {...props} />
-        </div>
-      )}
+      {iconString() && <div>{IconTemplate(iconString(), props)}</div>}
     </Suspense>
   )
 }

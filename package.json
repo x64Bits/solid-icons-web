@@ -19,7 +19,7 @@
   "dependencies": {
     "prismjs": "^1.24.1",
     "solid-app-router": "0.1.14",
-    "solid-icons": "^0.3.2",
+    "solid-icons": "file:../lib/dist",
     "solid-js": "1.2.6"
   }
 }
