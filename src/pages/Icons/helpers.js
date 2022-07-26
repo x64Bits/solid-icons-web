@@ -17,6 +17,8 @@ export async function searchByTerm(data, term) {
   if (ISPKG(subTerm)) {
     const pkg = getPkg(term)
 
+    console.log(data.length)
+
     const result = data.filter(
       (iconName) => iconName.toLowerCase().substring(0, 2) === pkg
     )

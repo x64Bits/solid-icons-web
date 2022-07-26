@@ -1,0 +1,1 @@
+export default {"a":{"fill":"currentColor","viewBox":"0 0 16 16"},"c":"<path fill-rule=\"evenodd\" d=\"M13.917 7A6.002 6.002 0 002.083 7H1.071a7.002 7.002 0 0113.858 0h-1.012z\" clip-rule=\"evenodd\"/>"}

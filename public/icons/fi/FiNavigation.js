@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    fill: 'none',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path d=\"M3 11l19-9-9 19-2-8-8-2z\"/>"}

@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    'stroke-width': '2',
-    fill: 'none',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M19 11v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path><path d="M13 13l9 3l-4 2l-2 4l-3 -9"></path><line x1="3" y1="3" x2="3" y2="3.01"></line><line x1="7" y1="3" x2="7" y2="3.01"></line><line x1="11" y1="3" x2="11" y2="3.01"></line><line x1="15" y1="3" x2="15" y2="3.01"></line><line x1="3" y1="7" x2="3" y2="7.01"></line><line x1="3" y1="11" x2="3" y2="11.01"></line><line x1="3" y1="15" x2="3" y2="15.01"></line>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><path d=\"M19 11V9a2 2 0 00-2-2H9a2 2 0 00-2 2v8a2 2 0 002 2h2\"/><path d=\"M13 13l9 3-4 2-2 4-3-9M3 3v.01M7 3v.01M11 3v.01M15 3v.01M3 7v.01M3 11v.01M3 15v.01\"/>"}

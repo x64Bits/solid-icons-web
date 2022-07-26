@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    'stroke-width': '2',
-    fill: 'none',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><rect x="4" y="6" width="4" height="5" rx="1"></rect><line x1="6" y1="4" x2="6" y2="6"></line><line x1="6" y1="11" x2="6" y2="20"></line><rect x="10" y="14" width="4" height="5" rx="1"></rect><line x1="12" y1="4" x2="12" y2="14"></line><line x1="12" y1="19" x2="12" y2="20"></line><rect x="16" y="5" width="4" height="6" rx="1"></rect><line x1="18" y1="4" x2="18" y2="5"></line><line x1="18" y1="11" x2="18" y2="20"></line>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><rect width=\"4\" height=\"5\" x=\"4\" y=\"6\" rx=\"1\"/><path d=\"M6 4v2M6 11v9\"/><rect width=\"4\" height=\"5\" x=\"10\" y=\"14\" rx=\"1\"/><path d=\"M12 4v10M12 19v1\"/><rect width=\"4\" height=\"6\" x=\"16\" y=\"5\" rx=\"1\"/><path d=\"M18 4v1M18 11v9\"/>"}

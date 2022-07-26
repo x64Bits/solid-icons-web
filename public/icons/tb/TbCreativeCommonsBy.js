@@ -1,0 +1,1 @@
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><circle cx=\"12\" cy=\"12\" r=\"9\"/><circle cx=\"12\" cy=\"7\" r=\"1\"/><path d=\"M9 13v-1a1 1 0 011-1h4a1 1 0 011 1v1a1 1 0 01-1 1h-.5l-.5 4h-2l-.5-4H10a1 1 0 01-1-1z\"/>"}

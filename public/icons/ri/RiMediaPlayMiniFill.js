@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 24 24'
-  },
-  c: '<g><path fill="none" d="M0 0h24v24H0z"></path>\n<path d="M7.752 5.439l10.508 6.13a.5.5 0 0 1 0 .863l-10.508 6.13A.5.5 0 0 1 7 18.128V5.871a.5.5 0 0 1 .752-.432z"></path></g>'
-}
+export default {"a":{"viewBox":"0 0 24 24"},"c":"<path fill=\"none\" d=\"M0 0h24v24H0z\"/><path d=\"M7.752 5.439l10.508 6.13a.5.5 0 010 .863l-10.508 6.13A.5.5 0 017 18.128V5.871a.5.5 0 01.752-.432z\"/>"}

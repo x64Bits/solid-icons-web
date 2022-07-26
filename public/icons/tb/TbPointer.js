@@ -1,0 +1,1 @@
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><path d=\"M6 6l4.153 11.793a.365.365 0 00.331.207.366.366 0 00.332-.207L13 13l4.787-1.994a.355.355 0 00.213-.323.355.355 0 00-.213-.323L6 6zM13.5 13.5L18 18\"/>"}

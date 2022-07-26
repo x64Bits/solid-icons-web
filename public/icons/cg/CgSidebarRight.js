@@ -1,8 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 24 24',
-    fill: 'none'
-  },
-  c: '<path fill-rule="evenodd" clip-rule="evenodd" d="M3 4H17V20H3V4ZM5 6H15V18H5V6Z" fill="currentColor"></path><path d="M21 4H19V20H21V4Z" fill="currentColor"></path>'
-}
+export default {"a":{"fill":"none","viewBox":"0 0 24 24"},"c":"<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3 4h14v16H3V4zm2 2h10v12H5V6z\" clip-rule=\"evenodd\"/><path fill=\"currentColor\" d=\"M21 4h-2v16h2V4z\"/>"}

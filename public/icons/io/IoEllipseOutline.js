@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 512 512'
-  },
-  c: '<title></title><circle fill="none" stroke="currentColor" stroke-width="32"  cx="256" cy="256" r="192"></circle>'
-}
+export default {"a":{"viewBox":"0 0 512 512"},"c":"<circle cx=\"256\" cy=\"256\" r=\"192\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"32\"/>"}

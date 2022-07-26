@@ -1,8 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 24 24',
-    fill: 'none'
-  },
-  c: '<path d="M8 12C8 10.5194 8.8044 9.22675 10 8.53513V15.4649C8.8044 14.7733 8 13.4806 8 12Z" stroke="currentColor" stroke-opacity="0.3" stroke-width="4"></path><path d="M14 15.4649V8.53513C15.1956 9.22675 16 10.5194 16 12C16 13.4806 15.1956 14.7733 14 15.4649Z" stroke="currentColor" stroke-opacity="0.6" stroke-width="4"></path><path d="M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z" stroke="currentColor" stroke-width="2"></path>'
-}
+export default {"a":{"fill":"none","viewBox":"0 0 24 24"},"c":"<path stroke-opacity=\".3\" stroke-width=\"4\" d=\"M8 12c0-1.48.804-2.773 2-3.465v6.93A3.998 3.998 0 018 12z\"/><path stroke-opacity=\".6\" stroke-width=\"4\" d=\"M14 15.465v-6.93c1.196.692 2 1.984 2 3.465 0 1.48-.804 2.773-2 3.465z\"/><path stroke-width=\"2\" d=\"M3 12a9 9 0 1118 0 9 9 0 01-18 0z\"/>"}

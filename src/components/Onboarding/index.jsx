@@ -34,8 +34,8 @@ export default function Onboarding() {
           Solid Icons
         </h2>
         <p className="text-light-text-secondary dark:text-dark-text-secondary px-4 md:px-32">
-          A collection of <b>12</b> open source icon libraries packed into one
-          for easy use in your <b>SolidJS</b> project with over <b>14142</b>{" "}
+          A collection of <b>16</b> open source icon libraries packed into one
+          for easy use in your <b>SolidJS</b> project with over <b>17734</b>{" "}
           icons.
         </p>
         <div className="flex flex-col text-left mt-10">

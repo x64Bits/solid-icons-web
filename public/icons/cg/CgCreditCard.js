@@ -1,8 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 24 24',
-    fill: 'none'
-  },
-  c: '<path d="M4 9C4 8.44772 4.44772 8 5 8H9C9.55228 8 10 8.44772 10 9C10 9.55228 9.55228 10 9 10H5C4.44772 10 4 9.55228 4 9Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4 3C1.79086 3 0 4.79086 0 7V17C0 19.2091 1.79086 21 4 21H20C22.2091 21 24 19.2091 24 17V7C24 4.79086 22.2091 3 20 3H4ZM20 5H4C2.89543 5 2 5.89543 2 7V14H22V7C22 5.89543 21.1046 5 20 5ZM22 16H2V17C2 18.1046 2.89543 19 4 19H20C21.1046 19 22 18.1046 22 17V16Z" fill="currentColor"></path>'
-}
+export default {"a":{"fill":"none","viewBox":"0 0 24 24"},"c":"<path fill=\"currentColor\" d=\"M4 9a1 1 0 011-1h4a1 1 0 010 2H5a1 1 0 01-1-1z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M4 3a4 4 0 00-4 4v10a4 4 0 004 4h16a4 4 0 004-4V7a4 4 0 00-4-4H4zm16 2H4a2 2 0 00-2 2v7h20V7a2 2 0 00-2-2zm2 11H2v1a2 2 0 002 2h16a2 2 0 002-2v-1z\" clip-rule=\"evenodd\"/>"}

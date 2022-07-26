@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 24 24'
-  },
-  c: '<path d="M12,2H11V13H22V12A10,10,0,0,0,12,2Z"></path>'
-}
+export default {"a":{"viewBox":"0 0 24 24"},"c":"<path d=\"M12 2h-1v11h11v-1A10 10 0 0012 2z\"/>"}

@@ -1,8 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 24 24',
-    fill: 'none'
-  },
-  c: '<path d="M11 7H8V17H11V7Z" fill="currentColor"></path><path d="M13 17H16V7H13V17Z" fill="currentColor"></path>'
-}
+export default {"a":{"fill":"none","viewBox":"0 0 24 24"},"c":"<path fill=\"currentColor\" d=\"M11 7H8v10h3V7zM13 17h3V7h-3v10z\"/>"}

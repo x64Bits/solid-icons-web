@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 24 24'
-  },
-  c: '<g><path fill="none" d="M0 0H24V24H0z"></path>\n<path d="M15 3c.552 0 1 .448 1 1v2h5c.552 0 1 .448 1 1v13c0 .552-.448 1-1 1H3c-.552 0-1-.448-1-1V7c0-.552.448-1 1-1h5V4c0-.552.448-1 1-1h6zM8 8H6v11h2V8zm10 0h-2v11h2V8zm-4-3h-4v1h4V5z"></path></g>'
-}
+export default {"a":{"viewBox":"0 0 24 24"},"c":"<path fill=\"none\" d=\"M0 0h24v24H0z\"/><path d=\"M15 3a1 1 0 011 1v2h5a1 1 0 011 1v13a1 1 0 01-1 1H3a1 1 0 01-1-1V7a1 1 0 011-1h5V4a1 1 0 011-1h6zM8 8H6v11h2V8zm10 0h-2v11h2V8zm-4-3h-4v1h4V5z\"/>"}

@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 512 512'
-  },
-  c: '<title></title><circle fill="none" stroke="currentColor" stroke-width="32"  cx="256" cy="256" r="192"></circle><circle fill="none" stroke="currentColor" stroke-width="32"  cx="256" cy="256" r="64"></circle><line stroke="currentColor" stroke-width="32"  x1="224" y1="192" x2="171" y2="85"></line><line stroke="currentColor" stroke-width="32"  x1="288" y1="192" x2="341" y2="85"></line><line stroke="currentColor" stroke-width="32"  x1="327.55" y1="255.81" x2="446.96" y2="255.94"></line><line stroke="currentColor" stroke-width="32"  x1="299.09" y1="313.13" x2="371.34" y2="408.19"></line><line stroke="currentColor" stroke-width="32"  x1="184.45" y1="255.81" x2="65.04" y2="255.94"></line><line stroke="currentColor" stroke-width="32"  x1="212.91" y1="313.13" x2="140.66" y2="408.19"></line>'
-}
+export default {"a":{"viewBox":"0 0 512 512"},"c":"<circle cx=\"256\" cy=\"256\" r=\"192\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-miterlimit=\"10\" stroke-width=\"32\"/><circle cx=\"256\" cy=\"256\" r=\"64\" fill=\"none\" stroke=\"currentColor\" stroke-miterlimit=\"10\" stroke-width=\"32\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-miterlimit=\"10\" stroke-width=\"32\" d=\"M224 192L171 85M288 192l53-107M327.55 255.81l119.41.13M299.09 313.13l72.25 95.06M184.45 255.81l-119.41.13M212.91 313.13l-72.25 95.06\"/>"}

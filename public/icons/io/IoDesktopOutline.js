@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 512 512'
-  },
-  c: '<title></title><rect fill="none" stroke="currentColor" stroke-width="32"  x="32" y="64" width="448" height="320" rx="32" ry="32"></rect><polygon points="304 448 296 384 216 384 208 448 304 448"></polygon><line stroke="currentColor" stroke-width="32"  x1="368" y1="448" x2="144" y2="448"></line><path fill="none" stroke="currentColor" stroke-width="32"  d="M32,304v48a32.09,32.09,0,0,0,32,32H448a32.09,32.09,0,0,0,32-32V304Zm224,64a16,16,0,1,1,16-16A16,16,0,0,1,256,368Z"></path>'
-}
+export default {"a":{"viewBox":"0 0 512 512"},"c":"<rect width=\"448\" height=\"320\" x=\"32\" y=\"64\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"32\" rx=\"32\" ry=\"32\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"32\" d=\"M304 448l-8-64h-80l-8 64h96z\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"32\" d=\"M368 448H144\"/><path d=\"M32 304v48a32.09 32.09 0 0032 32h384a32.09 32.09 0 0032-32v-48zm224 64a16 16 0 1116-16 16 16 0 01-16 16z\"/>"}

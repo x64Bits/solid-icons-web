@@ -1,8 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 24 24',
-    fill: 'none'
-  },
-  c: '<rect opacity="0.5" x="6" y="6" width="8" height="8" stroke="currentColor" stroke-width="2"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M9 9H19V19H9V9ZM15 11H17V17H11V15H15V11Z" fill="currentColor"></path>'
-}
+export default {"a":{"fill":"none","viewBox":"0 0 24 24"},"c":"<path stroke-width=\"2\" d=\"M6 6h8v8H6z\" opacity=\".5\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M9 9h10v10H9V9zm6 2h2v6h-6v-2h4v-4z\" clip-rule=\"evenodd\"/>"}

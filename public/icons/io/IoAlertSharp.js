@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 512 512'
-  },
-  c: '<path d="M240 80l8 240h16l8-240h-32zM240 400h32v32h-32z"/>'
-}
+export default {"a":{"viewBox":"0 0 512 512"},"c":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"square\" stroke-miterlimit=\"10\" stroke-width=\"32\" d=\"M240 80l8 240h16l8-240h-32zM240 400h32v32h-32z\"/>"}

@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 512 512'
-  },
-  c: '<title></title><circle fill="none" stroke="currentColor" stroke-width="32"  cx="256" cy="256" r="208"></circle><path fill="none" stroke="currentColor" stroke-width="32"  d="M256,464C141.12,464,48,370.88,48,256S141.12,48,256,48Z"></path>'
-}
+export default {"a":{"viewBox":"0 0 512 512"},"c":"<circle cx=\"256\" cy=\"256\" r=\"208\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"32\"/><path d=\"M256 464c-114.88 0-208-93.12-208-208S141.12 48 256 48z\"/>"}

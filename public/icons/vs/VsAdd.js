@@ -1,0 +1,1 @@
+export default {"a":{"fill":"currentColor","viewBox":"0 0 16 16"},"c":"<path d=\"M14 7v1H8v6H7V8H1V7h6V1h1v6h6z\"/>"}

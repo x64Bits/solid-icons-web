@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    'stroke-width': '2',
-    fill: 'none',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6.68 6.733a0.996 .996 0 0 1 -.68 .267h-2a1 1 0 0 1 -1 -1v-2c0 -.276 .112 -.527 .293 -.708"></path><rect x="17" y="3" width="4" height="4" rx="1"></rect><path d="M20.72 20.693a0.997 .997 0 0 1 -.72 .307h-2a1 1 0 0 1 -1 -1v-2c0 -.282 .116 -.536 .304 -.718"></path><rect x="3" y="17" width="4" height="4" rx="1"></rect><path d="M5 7v10"></path><path d="M19 7v8"></path><path d="M9 5h8"></path><path d="M7 19h10"></path><path d="M3 3l18 18"></path>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><path d=\"M6.68 6.733A.996.996 0 016 7H4a1 1 0 01-1-1V4a1 1 0 01.293-.708\"/><rect width=\"4\" height=\"4\" x=\"17\" y=\"3\" rx=\"1\"/><path d=\"M20.72 20.693A.997.997 0 0120 21h-2a1 1 0 01-1-1v-2c0-.282.116-.536.304-.718\"/><rect width=\"4\" height=\"4\" x=\"3\" y=\"17\" rx=\"1\"/><path d=\"M5 7v10M19 7v8M9 5h8M7 19h10M3 3l18 18\"/>"}

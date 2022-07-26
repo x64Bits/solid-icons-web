@@ -1,8 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 24 24',
-    fill: 'none'
-  },
-  c: '<path d="M19 14L12 21M12 21L5 14M12 21L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","viewBox":"0 0 24 24"},"c":"<path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 14l-7 7m0 0l-7-7m7 7V3\"/>"}

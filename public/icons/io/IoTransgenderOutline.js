@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 512 512'
-  },
-  c: '<title></title><circle fill="none" stroke="currentColor" stroke-width="32"  cx="256" cy="256" r="128"></circle><line stroke="currentColor" stroke-width="32"  x1="448" y1="352" x2="352" y2="448"></line><line stroke="currentColor" stroke-width="32"  x1="176" y1="80" x2="80.02" y2="175.98"></line><polyline points="464 128 464 48 384 48"></polyline><polyline points="48 128 48 48 128 48"></polyline><line stroke="currentColor" stroke-width="32"  x1="464" y1="48" x2="346.5" y2="165.5"></line><line stroke="currentColor" stroke-width="32"  x1="48" y1="48" x2="165.49" y2="165.49"></line><line stroke="currentColor" stroke-width="32"  x1="464" y1="464" x2="346.65" y2="346.37"></line>'
-}
+export default {"a":{"viewBox":"0 0 512 512"},"c":"<circle cx=\"256\" cy=\"256\" r=\"128\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"32\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"32\" d=\"M448 352l-96 96M176 80l-95.98 95.98M464 128V48h-80M48 128V48h80M464 48L346.5 165.5M48 48l117.49 117.49M464 464L346.65 346.37\"/>"}

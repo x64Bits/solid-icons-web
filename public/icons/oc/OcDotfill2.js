@@ -1,0 +1,1 @@
+export default {"a":{"viewBox":"0 0 16 16"},"c":"<path fill-rule=\"evenodd\" d=\"M8 4a4 4 0 100 8 4 4 0 000-8z\"/>"}

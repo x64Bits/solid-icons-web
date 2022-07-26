@@ -1,9 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    version: '1.2',
-    baseProfile: 'tiny',
-    viewBox: '0 0 24 24'
-  },
-  c: '<path d="M18 7h-12c-1.104 0-2 .896-2 2s.896 2 2 2h12c1.104 0 2-.896 2-2s-.896-2-2-2zM18 14h-12c-1.104 0-2 .896-2 2s.896 2 2 2h12c1.104 0 2-.896 2-2s-.896-2-2-2z"></path>'
-}
+export default {"a":{"baseProfile":"tiny","version":"1.2","viewBox":"0 0 24 24"},"c":"<path d=\"M18 7H6a2 2 0 000 4h12a2 2 0 000-4zm0 7H6a2 2 0 000 4h12a2 2 0 000-4z\"/>"}

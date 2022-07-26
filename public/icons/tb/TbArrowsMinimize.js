@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    'stroke-width': '2',
-    fill: 'none',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="5 9 9 9 9 5"></polyline><line x1="3" y1="3" x2="9" y2="9"></line><polyline points="5 15 9 15 9 19"></polyline><line x1="3" y1="21" x2="9" y2="15"></line><polyline points="19 9 15 9 15 5"></polyline><line x1="15" y1="9" x2="21" y2="3"></line><polyline points="19 15 15 15 15 19"></polyline><line x1="15" y1="15" x2="21" y2="21"></line>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><path d=\"M5 9h4V5M3 3l6 6M5 15h4v4M3 21l6-6M19 9h-4V5M15 9l6-6M19 15h-4v4M15 15l6 6\"/>"}

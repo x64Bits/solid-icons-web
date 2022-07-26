@@ -1,8 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 24 24',
-    fill: 'none'
-  },
-  c: '<path d="M3 3H9V5H6.46173L11.3047 9.84298L9.8905 11.2572L5 6.3667V9H3V3Z" fill="currentColor"></path><path d="M3 21H9V19H6.3764L11.3046 14.0718L9.89038 12.6576L5 17.548V15H3V21Z" fill="currentColor"></path><path d="M15 21H21V15H19V17.5244L14.1332 12.6576L12.719 14.0718L17.6472 19H15V21Z" fill="currentColor"></path><path d="M21 3H15V5H17.5619L12.7189 9.84301L14.1331 11.2572L19 6.39032V9H21V3Z" fill="currentColor"></path>'
-}
+export default {"a":{"fill":"none","viewBox":"0 0 24 24"},"c":"<path fill=\"currentColor\" d=\"M3 3h6v2H6.462l4.843 4.843-1.415 1.414L5 6.367V9H3V3zM3 21h6v-2H6.376l4.929-4.928-1.415-1.414L5 17.548V15H3v6zM15 21h6v-6h-2v2.524l-4.867-4.866-1.414 1.414L17.647 19H15v2zM21 3h-6v2h2.562l-4.843 4.843 1.414 1.414L19 6.39V9h2V3z\"/>"}

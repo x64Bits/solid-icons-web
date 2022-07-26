@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 512 512'
-  },
-  c: '<title></title><circle fill="none" stroke="currentColor" stroke-width="32"  cx="256" cy="256" r="208"></circle><circle fill="none" stroke="currentColor" stroke-width="32"  cx="256" cy="256" r="80"></circle><line stroke="currentColor" stroke-width="32"  x1="208" y1="54" x2="216" y2="186"></line><line stroke="currentColor" stroke-width="32"  x1="296" y1="186" x2="304" y2="54"></line><line stroke="currentColor" stroke-width="32"  x1="208" y1="458" x2="216" y2="326"></line><line stroke="currentColor" stroke-width="32"  x1="296" y1="326" x2="304" y2="458"></line><line stroke="currentColor" stroke-width="32"  x1="458" y1="208" x2="326" y2="216"></line><line stroke="currentColor" stroke-width="32"  x1="326" y1="296" x2="458" y2="304"></line><line stroke="currentColor" stroke-width="32"  x1="54" y1="208" x2="186" y2="216"></line><line stroke="currentColor" stroke-width="32"  x1="186" y1="296" x2="54" y2="304"></line>'
-}
+export default {"a":{"viewBox":"0 0 512 512"},"c":"<circle cx=\"256\" cy=\"256\" r=\"208\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"32\"/><circle cx=\"256\" cy=\"256\" r=\"80\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"32\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"32\" d=\"M208 54l8 132M296 186l8-132M208 458l8-132M296 326l8 132M458 208l-132 8M326 296l132 8M54 208l132 8M186 296l-132 8\"/>"}

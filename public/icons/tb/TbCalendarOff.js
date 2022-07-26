@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    'stroke-width': '2',
-    fill: 'none',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M19.823 19.824a2 2 0 0 1 -1.823 1.176h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 1.175 -1.823m3.825 -.177h9a2 2 0 0 1 2 2v9"></path><line x1="16" y1="3" x2="16" y2="7"></line><line x1="8" y1="3" x2="8" y2="4"></line><path d="M4 11h7m4 0h5"></path><line x1="11" y1="15" x2="12" y2="15"></line><line x1="12" y1="15" x2="12" y2="18"></line><line x1="3" y1="3" x2="21" y2="21"></line>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><path d=\"M19.823 19.824A2 2 0 0118 21H6a2 2 0 01-2-2V7a2 2 0 011.175-1.823M9 5h9a2 2 0 012 2v9M16 3v4M8 3v1M4 11h7m4 0h5M11 15h1M12 15v3M3 3l18 18\"/>"}

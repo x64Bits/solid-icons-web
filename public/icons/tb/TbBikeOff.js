@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    'stroke-width': '2',
-    fill: 'none',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="5" cy="18" r="3"></circle><path d="M16.437 16.44a3 3 0 0 0 4.123 4.123m1.44 -2.563a3 3 0 0 0 -3 -3"></path><path d="M12 19v-4l-3 -3l1.665 -1.332m2.215 -1.772l1.12 -.896l2 3h3"></path><circle cx="17" cy="5" r="1"></circle><path d="M3 3l18 18"></path>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><circle cx=\"5\" cy=\"18\" r=\"3\"/><path d=\"M16.437 16.44a3 3 0 004.123 4.123M22 18a3 3 0 00-3-3M12 19v-4l-3-3 1.665-1.332m2.215-1.772L14 8l2 3h3\"/><circle cx=\"17\" cy=\"5\" r=\"1\"/><path d=\"M3 3l18 18\"/>"}

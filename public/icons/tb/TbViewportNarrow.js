@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    'stroke-width': '2',
-    fill: 'none',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 12h7l-3 -3m0 6l3 -3"></path><path d="M21 12h-7l3 -3m0 6l-3 -3"></path><path d="M9 6v-3h6v3"></path><path d="M9 18v3h6v-3"></path>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><path d=\"M3 12h7L7 9m0 6l3-3M21 12h-7l3-3m0 6l-3-3M9 6V3h6v3M9 18v3h6v-3\"/>"}

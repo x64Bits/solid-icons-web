@@ -1,8 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 24 24',
-    fill: 'none'
-  },
-  c: '<rect x="3" y="10" width="18" height="4" rx="2" fill="currentColor"></rect>'
-}
+export default {"a":{"fill":"none","viewBox":"0 0 24 24"},"c":"<rect width=\"18\" height=\"4\" x=\"3\" y=\"10\" fill=\"currentColor\" rx=\"2\"/>"}

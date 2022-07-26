@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    'stroke-width': '2',
-    fill: 'none',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 4l2 1l2 -1m-2 -2v6.5l3 1.72"></path><path d="M10 4l2 1l2 -1m-2 -2v6.5l3 1.72" transform="rotate(60 12 12)"></path><path d="M10 4l2 1l2 -1m-2 -2v6.5l3 1.72" transform="rotate(120 12 12)"></path><path d="M10 4l2 1l2 -1m-2 -2v6.5l3 1.72" transform="rotate(180 12 12)"></path><path d="M10 4l2 1l2 -1m-2 -2v6.5l3 1.72" transform="rotate(240 12 12)"></path><path d="M10 4l2 1l2 -1m-2 -2v6.5l3 1.72" transform="rotate(300 12 12)"></path>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><path d=\"M10 4l2 1 2-1m-2-2v6.5l3 1.72M17.928 6.268l.134 2.232 1.866 1.232M20.66 7l-5.629 3.25.01 3.458M19.928 14.268L18.062 15.5l-.134 2.232M20.66 17l-5.629-3.25-2.99 1.738M14 20l-2-1-2 1m2 2v-6.5l-3-1.72M6.072 17.732L5.938 15.5l-1.866-1.232M3.34 17l5.629-3.25-.01-3.458M4.072 9.732L5.938 8.5l.134-2.232M3.34 7l5.629 3.25 2.99-1.738\"/>"}

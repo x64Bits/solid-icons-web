@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    'stroke-width': '2',
-    fill: 'none',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="7.5" y1="4.21" x2="7.5" y2="4.22"></line><line x1="4.21" y1="7.5" x2="4.21" y2="7.51"></line><line x1="3" y1="12" x2="3" y2="12.01"></line><line x1="4.21" y1="16.5" x2="4.21" y2="16.51"></line><line x1="7.5" y1="19.79" x2="7.5" y2="19.8"></line><line x1="12" y1="21" x2="12" y2="21.01"></line><line x1="16.5" y1="19.79" x2="16.5" y2="19.8"></line><line x1="19.79" y1="16.5" x2="19.79" y2="16.51"></line><line x1="21" y1="12" x2="21" y2="12.01"></line><line x1="19.79" y1="7.5" x2="19.79" y2="7.51"></line><line x1="16.5" y1="4.21" x2="16.5" y2="4.22"></line><line x1="12" y1="3" x2="12" y2="3.01"></line>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><path d=\"M7.5 4.21v.01M4.21 7.5v.01M3 12v.01M4.21 16.5v.01M7.5 19.79v.01M12 21v.01M16.5 19.79v.01M19.79 16.5v.01M21 12v.01M19.79 7.5v.01M16.5 4.21v.01M12 3v.01\"/>"}

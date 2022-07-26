@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 512 512'
-  },
-  c: '<title></title><polyline points="176 112 256 32 336 112"></polyline><line stroke="currentColor" stroke-width="32"  x1="255.98" y1="32" x2="256" y2="480"></line><polyline points="176 400 256 480 336 400"></polyline><polyline points="400 176 480 256 400 336"></polyline><polyline points="112 176 32 256 112 336"></polyline><line stroke="currentColor" stroke-width="32"  x1="32" y1="256" x2="480" y2="256"></line>'
-}
+export default {"a":{"viewBox":"0 0 512 512"},"c":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"32\" d=\"M176 112l80-80 80 80M255.98 32l.02 448M176 400l80 80 80-80M400 176l80 80-80 80M112 176l-80 80 80 80M32 256h448\"/>"}

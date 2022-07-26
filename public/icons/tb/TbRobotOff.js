@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    'stroke-width': '2',
-    fill: 'none',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M11 7h6a2 2 0 0 1 2 2v1l1 1v3l-1 1m-.171 3.811a2 2 0 0 1 -1.829 1.189h-10a2 2 0 0 1 -2 -2v-3l-1 -1v-3l1 -1v-1a2 2 0 0 1 2 -2"></path><path d="M10 16h4"></path><circle cx="8.5" cy="11.5" r="1"></circle><path d="M15.854 11.853a0.498 .498 0 0 0 -.354 -.853a0.498 .498 0 0 0 -.356 .149"></path><path d="M8.336 4.343l-.336 -1.343"></path><path d="M15 7l1 -4"></path><path d="M3 3l18 18"></path>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><path d=\"M11 7h6a2 2 0 012 2v1l1 1v3l-1 1m-.171 3.811A2 2 0 0117 20H7a2 2 0 01-2-2v-3l-1-1v-3l1-1V9a2 2 0 012-2M10 16h4\"/><circle cx=\"8.5\" cy=\"11.5\" r=\"1\"/><path d=\"M15.854 11.853A.498.498 0 0015.5 11a.498.498 0 00-.356.149M8.336 4.343L8 3M15 7l1-4M3 3l18 18\"/>"}

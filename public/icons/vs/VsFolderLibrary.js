@@ -1,0 +1,1 @@
+export default {"a":{"fill":"currentColor","viewBox":"0 0 16 16"},"c":"<path fill-rule=\"evenodd\" d=\"M7.71 3h6.79l.51.5V7H14V5.99H7.69l-.86.86-.35.15H1.99v6H7v1H1.51l-.5-.5v-11l.5-.5h5l.35.15.85.85zm-.22 2h6.5l.01-.99H7.5l-.36-.15-.85-.85H2v3h4.28l.86-.86.35-.15z\" clip-rule=\"evenodd\"/><path d=\"M8 8h1v6H8zM10 8h1v6h-1zM12.004 8.352l.94-.342 2.052 5.638-.94.342z\"/>"}

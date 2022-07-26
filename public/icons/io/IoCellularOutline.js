@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 512 512'
-  },
-  c: '<title></title><rect fill="none" stroke="currentColor" stroke-width="32"  x="416" y="96" width="64" height="320" rx="8" ry="8"></rect><rect fill="none" stroke="currentColor" stroke-width="32"  x="288" y="176" width="64" height="240" rx="8" ry="8"></rect><rect fill="none" stroke="currentColor" stroke-width="32"  x="160" y="240" width="64" height="176" rx="8" ry="8"></rect><rect fill="none" stroke="currentColor" stroke-width="32"  x="32" y="304" width="64" height="112" rx="8" ry="8"></rect>'
-}
+export default {"a":{"viewBox":"0 0 512 512"},"c":"<rect width=\"64\" height=\"320\" x=\"416\" y=\"96\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"32\" rx=\"8\" ry=\"8\"/><rect width=\"64\" height=\"240\" x=\"288\" y=\"176\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"32\" rx=\"8\" ry=\"8\"/><rect width=\"64\" height=\"176\" x=\"160\" y=\"240\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"32\" rx=\"8\" ry=\"8\"/><rect width=\"64\" height=\"112\" x=\"32\" y=\"304\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"32\" rx=\"8\" ry=\"8\"/>"}

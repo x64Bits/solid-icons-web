@@ -1,0 +1,1 @@
+export default {"a":{"viewBox":"0 0 24 24"},"c":"<path d=\"M12 18a6 6 0 100-12 6 6 0 000 12z\"/>"}

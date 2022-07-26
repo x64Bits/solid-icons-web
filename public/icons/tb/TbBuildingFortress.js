@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    'stroke-width': '2',
-    fill: 'none',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 21h1a1 1 0 0 0 1 -1v-1h0a3 3 0 0 1 6 0m3 2h1a1 1 0 0 0 1 -1v-15l-3 -2l-3 2v6h-4v-6l-3 -2l-3 2v15a1 1 0 0 0 1 1h2m8 -2v1a1 1 0 0 0 1 1h2"></path><path d="M7 7h0v.01"></path><path d="M7 10h0v.01"></path><path d="M7 13h0v.01"></path><path d="M17 7h0v.01"></path><path d="M17 10h0v.01"></path><path d="M17 13h0v.01"></path>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><path d=\"M7 21h1a1 1 0 001-1v-1h0a3 3 0 016 0m3 2h1a1 1 0 001-1V5l-3-2-3 2v6h-4V5L7 3 4 5v15a1 1 0 001 1h2m8-2v1a1 1 0 001 1h2M7 7h0v.01M7 10h0v.01M7 13h0v.01M17 7h0v.01M17 10h0v.01M17 13h0v.01\"/>"}

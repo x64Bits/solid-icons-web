@@ -42,7 +42,11 @@ export default function Sidepanel() {
             <li className="font-bold pl-5 pb-3">Collections</li>
             <For each={packs()} fallback={<ItemsSkeleton />}>
               {(item) => (
-                <Item onHide={onHide} name={item.name} path={item.path} />
+                <Item
+                  onHide={onHide}
+                  name={item.packName}
+                  path={item.shortName}
+                />
               )}
             </For>
           </ul>

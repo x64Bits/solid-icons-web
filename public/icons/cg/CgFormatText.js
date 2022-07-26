@@ -1,8 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 24 24',
-    fill: 'none'
-  },
-  c: '<path d="M6.5 3H3V6.5H4V4H6.5V3Z" fill="currentColor"></path><path d="M8.5 4V3H11V4H8.5Z" fill="currentColor"></path><path d="M13 4H15.5V3H13V4Z" fill="currentColor"></path><path d="M17.5 3V4H20V6.5H21V3H17.5Z" fill="currentColor"></path><path d="M21 8.5H20V11H21V8.5Z" fill="currentColor"></path><path d="M21 13H20V15.5H21V13Z" fill="currentColor"></path><path d="M21 17.5H20V20H17.5V21H21V17.5Z" fill="currentColor"></path><path d="M15.5 21V20H13V21H15.5Z" fill="currentColor"></path><path d="M11 21V20H8.5V21H11Z" fill="currentColor"></path><path d="M6.5 21V20H4V17.5H3V21H6.5Z" fill="currentColor"></path><path d="M3 15.5H4V13H3V15.5Z" fill="currentColor"></path><path d="M3 11H4V8.5H3V11Z" fill="currentColor"></path><path d="M11 9.5H7V7.5H17V9.5H13V16.5H11V9.5Z" fill="currentColor"></path>'
-}
+export default {"a":{"fill":"none","viewBox":"0 0 24 24"},"c":"<path fill=\"currentColor\" d=\"M6.5 3H3v3.5h1V4h2.5V3zM8.5 4V3H11v1H8.5zM13 4h2.5V3H13v1zM17.5 3v1H20v2.5h1V3h-3.5zM21 8.5h-1V11h1V8.5zM21 13h-1v2.5h1V13zM21 17.5h-1V20h-2.5v1H21v-3.5zM15.5 21v-1H13v1h2.5zM11 21v-1H8.5v1H11zM6.5 21v-1H4v-2.5H3V21h3.5zM3 15.5h1V13H3v2.5zM3 11h1V8.5H3V11zM11 9.5H7v-2h10v2h-4v7h-2v-7z\"/>"}

@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 512 512'
-  },
-  c: '<title></title><path fill="none" stroke="currentColor" stroke-width="32"  d="M256,80A176,176,0,1,0,432,256,176,176,0,0,0,256,80Z"></path><path fill="none" stroke="currentColor" stroke-width="32"  d="M232,160a72,72,0,1,0,72,72A72,72,0,0,0,232,160Z"></path><line stroke="currentColor" stroke-width="32"  x1="283.64" y1="283.64" x2="336" y2="336"></line>'
-}
+export default {"a":{"viewBox":"0 0 512 512"},"c":"<path fill=\"none\" stroke=\"currentColor\" stroke-miterlimit=\"10\" stroke-width=\"32\" d=\"M256 80a176 176 0 10176 176A176 176 0 00256 80z\"/><path fill=\"none\" stroke=\"currentColor\" stroke-miterlimit=\"10\" stroke-width=\"32\" d=\"M232 160a72 72 0 1072 72 72 72 0 00-72-72z\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-miterlimit=\"10\" stroke-width=\"32\" d=\"M283.64 283.64L336 336\"/>"}

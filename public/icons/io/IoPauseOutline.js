@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 512 512'
-  },
-  c: '<title></title><rect fill="none" stroke="currentColor" stroke-width="32"  x="176" y="96" width="16" height="320"></rect><rect fill="none" stroke="currentColor" stroke-width="32"  x="320" y="96" width="16" height="320"></rect>'
-}
+export default {"a":{"viewBox":"0 0 512 512"},"c":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"32\" d=\"M176 96h16v320h-16zM320 96h16v320h-16z\"/>"}

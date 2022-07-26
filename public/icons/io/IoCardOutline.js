@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 512 512'
-  },
-  c: '<title></title><rect fill="none" stroke="currentColor" stroke-width="32"  x="48" y="96" width="416" height="320" rx="56" ry="56"></rect><line stroke="currentColor" stroke-width="32"  x1="48" y1="192" x2="464" y2="192"></line><rect fill="none" stroke="currentColor" stroke-width="32"  x="128" y="300" width="48" height="20"></rect>'
-}
+export default {"a":{"viewBox":"0 0 512 512"},"c":"<rect width=\"416\" height=\"320\" x=\"48\" y=\"96\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"32\" rx=\"56\" ry=\"56\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"60\" d=\"M48 192h416M128 300h48v20h-48z\"/>"}

@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    'stroke-width': '2',
-    fill: 'none',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><rect x="3" y="15" width="6" height="6" rx="2"></rect><path d="M19 15a2 2 0 0 1 2 2m-.591 3.42c-.362 .358 -.86 .58 -1.409 .58h-2a2 2 0 0 1 -2 -2v-2c0 -.549 .221 -1.046 .579 -1.407"></path><path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2"></path><path d="M6 15v-1a2 2 0 0 1 2 -2h4m4 0a2 2 0 0 1 2 2"></path><path d="M3 3l18 18"></path>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><rect width=\"6\" height=\"6\" x=\"3\" y=\"15\" rx=\"2\"/><path d=\"M19 15a2 2 0 012 2m-.591 3.42c-.362.358-.86.58-1.409.58h-2a2 2 0 01-2-2v-2c0-.549.221-1.046.579-1.407M9 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2M6 15v-1a2 2 0 012-2h4m4 0a2 2 0 012 2M3 3l18 18\"/>"}

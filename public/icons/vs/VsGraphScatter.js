@@ -1,0 +1,1 @@
+export default {"a":{"fill":"currentColor","viewBox":"0 0 16 16"},"c":"<path d=\"M15 13v1H1.5l-.5-.5V0h1v13h13z\"/><path d=\"M5 2h2v2H5zM12 1h2v2h-2zM8 5h2v2H8zM5 9h2v2H5zM12 8h2v2h-2z\"/>"}

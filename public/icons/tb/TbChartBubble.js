@@ -1,11 +1,1 @@
-export default {
-  a: {
-    stroke: 'currentColor',
-    viewBox: '0 0 24 24',
-    'stroke-width': '2',
-    fill: 'none',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  },
-  c: '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="6" cy="16" r="3"></circle><circle cx="16" cy="19" r="2"></circle><circle cx="14.5" cy="7.5" r="4.5"></circle>'
-}
+export default {"a":{"fill":"none","stroke":"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2","viewBox":"0 0 24 24"},"c":"<path stroke=\"none\" d=\"M0 0h24v24H0z\"/><circle cx=\"6\" cy=\"16\" r=\"3\"/><circle cx=\"16\" cy=\"19\" r=\"2\"/><circle cx=\"14.5\" cy=\"7.5\" r=\"4.5\"/>"}

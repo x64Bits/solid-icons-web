@@ -1,7 +1,1 @@
-export default {
-  a: {
-    stroke: 'none',
-    viewBox: '0 0 512 512'
-  },
-  c: '<title></title><path fill="none" stroke="currentColor" stroke-width="32"  d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z"></path><path fill="none" stroke="currentColor" stroke-width="32"  d="M296,352h28a28,28,0,0,0,28-28V296"></path><path fill="none" stroke="currentColor" stroke-width="32"  d="M352,216V188a28,28,0,0,0-28-28H296"></path><path fill="none" stroke="currentColor" stroke-width="32"  d="M216,352H188a28,28,0,0,1-28-28V296"></path><path fill="none" stroke="currentColor" stroke-width="32"  d="M160,216V188a28,28,0,0,1,28-28h28"></path>'
-}
+export default {"a":{"viewBox":"0 0 512 512"},"c":"<path fill=\"none\" stroke=\"currentColor\" stroke-miterlimit=\"10\" stroke-width=\"32\" d=\"M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"32\" d=\"M296 352h28a28 28 0 0028-28v-28M352 216v-28a28 28 0 00-28-28h-28M216 352h-28a28 28 0 01-28-28v-28M160 216v-28a28 28 0 0128-28h28\"/>"}

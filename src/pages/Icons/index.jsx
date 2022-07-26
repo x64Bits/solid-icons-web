@@ -127,9 +127,6 @@ export default function Icons() {
         <Show when={state.iconPreview}>
           <IconPreview />
         </Show>
-        <Show when={state.openCustomizer}>
-          <Customizer />
-        </Show>
       </div>
     </>
   )
