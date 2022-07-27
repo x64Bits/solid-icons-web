@@ -6,9 +6,7 @@ const DATA_SRC = env.DEV ? "/public" : ""
 const getPkg = (term) => {
   const pkgName = term.split(":")[1]
 
-  const fixVsc = pkgName === "vsc" ? "vs" : pkgName
-
-  return fixVsc
+  return pkgName
 }
 
 export async function searchByTerm(data, term) {
