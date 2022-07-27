@@ -17,9 +17,8 @@ const iconsPackage = env.DEV ? "/public/icons" : "/icons"
 
 function getPath(name = "BsSquareFill") {
   const packNomenclature = name.slice(0, 2).toLowerCase()
-  const fixedNomenclature = packNomenclature === "vs" ? "vsc" : packNomenclature
 
-  const path = `${iconsPackage}/${fixedNomenclature}/${name}.js`
+  const path = `${iconsPackage}/${packNomenclature}/${name}.js`
 
   return path
 }
