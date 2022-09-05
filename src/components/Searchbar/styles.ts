@@ -26,16 +26,16 @@ const spinAnimation = keyframes`
 export const SearchBarContainer = styled("div")`
   display: flex;
   opacity: 1;
-  background-color: ${(props) => props.theme.colors.background};
-  border-radius: ${(props) => props.theme.rounded.full};
-  box-shadow: ${(props) => props.theme.shadow.unfocus};
-  border: 1px solid ${(props) => props.theme.colors.stroke};
-  color: ${(props) => props.theme.colors.accent};
+  background-color: ${(props) => props.theme().colors.background};
+  border-radius: ${(props) => props.theme().rounded.full};
+  box-shadow: ${(props) => props.theme().shadow.unfocus};
+  border: 1px solid ${(props) => props.theme().colors.stroke};
+  color: ${(props) => props.theme().colors.accent};
   animation: ${showAnimation} 250ms ease;
   cursor: text;
 
   &:focus-within {
-    background-color: ${(props) => props.theme.colors.focus};
+    background-color: ${(props) => props.theme().colors.focus};
   }
 `;
 
@@ -56,7 +56,7 @@ export const SearchInput = styled("input")<ISearchInputProps>`
   flex: 1;
   padding: ${(props) => (props.compact ? "8px" : "15px")} 0px;
   font-size: 1.1em;
-  color: ${(props) => props.theme.colors.textPrimary};
+  color: ${(props) => props.theme().colors.textPrimary};
   font-weight: 300;
 
   &:focus {
@@ -64,7 +64,7 @@ export const SearchInput = styled("input")<ISearchInputProps>`
   }
 
   &::placeholder {
-    color: ${(props) => props.theme.colors.textPrimary};
+    color: ${(props) => props.theme().colors.textPrimary};
     font-weight: 300;
   }
 `;
@@ -77,7 +77,7 @@ export const SearchShortcut = styled("div")`
   min-width: 70px;
   margin: 0 10px;
   font-weight: 400;
-  color: ${(props) => props.theme.colors.accent};
+  color: ${(props) => props.theme().colors.accent};
 
   & svg {
     animation: ${spinAnimation} 1s linear infinite;

@@ -11,8 +11,8 @@ export const LayoutContainer = styled("div")`
     "Header Header"
     "Sidebar Content";
   max-height: 100vh;
-  color: ${(props) => props.theme.colors.textPrimary};
-  background-color: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme().colors.textPrimary};
+  background-color: ${(props) => props.theme().colors.background};
 
   @media (max-width: ${Breakpoints.sm}) {
     & {

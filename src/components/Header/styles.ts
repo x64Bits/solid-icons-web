@@ -13,13 +13,12 @@ export const HeaderContainer = styled("header")<IHeaderContainerProps>`
   align-items: center;
   height: 100%;
   padding: 0 30px;
-  background: ${(props) => props.theme.colors.background};
+  background: ${(props) => props.theme().colors.background};
   border: 0px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: ${(props) => props.theme.colors.stroke};
+  border-bottom-color: ${(props) => props.theme().colors.stroke};
   min-height: ${HEADER_DEFAULT_HEIGHT}px;
-  transition: 250ms ease;
 
   @media (max-width: ${Breakpoints.sm}) {
     & {
@@ -37,7 +36,7 @@ export const HeaderTitle = styled("span")`
 export const HeaderItemsContainer = styled("div")`
   display: flex;
   align-items: center;
-  color: ${(props) => props.theme.colors.accent};
+  color: ${(props) => props.theme().colors.accent};
 
   @media (max-width: ${Breakpoints.sm}) {
     & {

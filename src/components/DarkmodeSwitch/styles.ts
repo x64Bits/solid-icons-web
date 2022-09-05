@@ -7,8 +7,8 @@ interface IDarkModeContainer {
 export const DarkModeContainer = styled("button")<IDarkModeContainer>`
   width: 50px;
   height: 18px;
-  border: 1px solid ${(props) => props.theme.colors.accent};
-  border-radius: ${(props) => props.theme.rounded.full};
+  border: 1px solid ${(props) => props.theme().colors.accent};
+  border-radius: ${(props) => props.theme().rounded.full};
   margin-right: 0.5em;
   position: relative;
   cursor: pointer;
@@ -23,15 +23,15 @@ export const DarkModeContainer = styled("button")<IDarkModeContainer>`
 export const IconToggleContainer = styled("div")`
   width: 25px;
   height: 25px;
-  background-color: ${(props) => props.theme.colors.accent};
-  border-radius: ${(props) => props.theme.rounded.full};
+  background-color: ${(props) => props.theme().colors.accent};
+  border-radius: ${(props) => props.theme().rounded.full};
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme().colors.background};
   top: -4px;
   position: absolute;
-  box-shadow: ${(props) => props.theme.shadow.unfocus};
+  box-shadow: ${(props) => props.theme().shadow.unfocus};
 
   & svg {
     width: 20px;

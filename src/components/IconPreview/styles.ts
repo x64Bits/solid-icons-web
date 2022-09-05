@@ -21,7 +21,7 @@ export const PreviewOverlay = styled("div")`
   height: 100vh;
   background-color: red;
   z-index: 999;
-  background-color: ${(props) => props.theme.colors.overlay};
+  background-color: ${(props) => props.theme().colors.overlay};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,10 +29,10 @@ export const PreviewOverlay = styled("div")`
 
 export const PreviewModal = styled("div")`
   width: 60%;
-  background-color: ${(props) => props.theme.colors.backgroundSecondary};
-  border: 1px solid ${(props) => props.theme.colors.strokeAccent};
-  box-shadow: ${(props) => props.theme.shadow.unfocus};
-  border-radius: ${(props) => props.theme.rounded.medium};
+  background-color: ${(props) => props.theme().colors.backgroundSecondary};
+  border: 1px solid ${(props) => props.theme().colors.strokeAccent};
+  box-shadow: ${(props) => props.theme().shadow.unfocus};
+  border-radius: ${(props) => props.theme().rounded.medium};
   overflow: hidden;
   position: relative;
   animation: ${showAnimation} 250ms ease;
@@ -45,9 +45,9 @@ export const PreviewModal = styled("div")`
 `;
 
 export const CloseButton = styled("button")`
-  background-color: ${(props) => props.theme.colors.surfaceModal};
-  color: ${(props) => props.theme.colors.secondary};
-  border: 1px solid ${(props) => props.theme.colors.strokeAccent};
+  background-color: ${(props) => props.theme().colors.surfaceModal};
+  color: ${(props) => props.theme().colors.secondary};
+  border: 1px solid ${(props) => props.theme().colors.strokeAccent};
   border-top: 0;
   border-right: 0;
   font-size: 1.6em;
@@ -81,9 +81,9 @@ export const PreviewContent = styled("div")`
 
 export const PreviewIconContainer = styled("div")`
   width: 100%;
-  border: 1px solid ${(props) => props.theme.colors.strokeAccent};
+  border: 1px solid ${(props) => props.theme().colors.strokeAccent};
   justify-self: center;
-  border-radius: ${(props) => props.theme.rounded.medium};
+  border-radius: ${(props) => props.theme().rounded.medium};
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -102,7 +102,7 @@ export const PreviewIconContainer = styled("div")`
   & svg {
     width: 200px;
     height: 200px;
-    border: ${(props) => props.theme.colors.textPrimary};
+    border: ${(props) => props.theme().colors.textPrimary};
   }
 `;
 

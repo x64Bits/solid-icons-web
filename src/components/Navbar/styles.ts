@@ -15,7 +15,7 @@ const responsiveNavbar = (props: DefaultTheme) => /*css*/ `
     & {
       position: absolute;
       width: 80vw;
-      background-color: ${props.colors.surface};
+      background-color: ${props().colors.surface};
       z-index: 2;
       max-height: calc(97vh - ${HEADER_DEFAULT_HEIGHT}px);
       overflow-y: auto;
@@ -29,9 +29,9 @@ export const NavbarContainer = styled("nav")<INavbarContainerProps>`
   padding-top: 1rem;
   font-size: 1.4em;
   position: relative;
-  color: ${(props) => props.theme.colors.textPrimary};
+  color: ${(props) => props.theme().colors.textPrimary};
   border: 0px;
-  border-right: 1px solid ${(props) => props.theme.colors.stroke};
+  border-right: 1px solid ${(props) => props.theme().colors.stroke};
 
   ${(props) => props.visible && responsiveNavbar(props.theme)};
 `;
@@ -74,15 +74,15 @@ export const NavItemButton = styled("button")<INavItemProps>`
   cursor: pointer;
   padding: 13px 12px;
   margin: 0 10px;
-  border-radius: ${(props) => props.theme.rounded.full};
-  color: ${(props) => props.theme.colors.textPrimary};
+  border-radius: ${(props) => props.theme().rounded.full};
+  color: ${(props) => props.theme().colors.textPrimary};
   background-color: ${(props) =>
-    props.active ? props.theme.colors.focus : "transparent"};
-  color: ${(props) => (props.active ? props.theme.colors.accent : "inherit")};
+    props.active ? props.theme().colors.focus : "transparent"};
+  color: ${(props) => (props.active ? props.theme().colors.accent : "inherit")};
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.focus};
-    color: ${(props) => props.theme.colors.accent};
+    background-color: ${(props) => props.theme().colors.focus};
+    color: ${(props) => props.theme().colors.accent};
   }
 `;
 
@@ -90,7 +90,7 @@ export const NavbarItemsContainer = styled("div")`
   display: none;
   align-items: center;
   justify-content: flex-end;
-  color: ${(props) => props.theme.colors.accent};
+  color: ${(props) => props.theme().colors.accent};
 
   @media (max-width: ${Breakpoints.sm}) {
     & {

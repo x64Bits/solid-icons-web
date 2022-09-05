@@ -29,10 +29,10 @@ const locs = /*css*/ `
 `;
 
 export const CodeFrame = styled("div")<ICodeFrameProps>`
-  background-color: ${(props) => props.theme.colors.background};
-  border-radius: ${(props) => props.theme.rounded.small};
-  border: 1px solid ${(props) => props.theme.colors.strokeAccent};
-  box-shadow: ${(props) => props.theme.shadow.unfocus};
+  background-color: ${(props) => props.theme().colors.background};
+  border-radius: ${(props) => props.theme().rounded.small};
+  border: 1px solid ${(props) => props.theme().colors.strokeAccent};
+  box-shadow: ${(props) => props.theme().shadow.unfocus};
   position: relative;
   overflow: hidden;
 
@@ -42,15 +42,15 @@ export const CodeFrame = styled("div")<ICodeFrameProps>`
 export const CodeCircle = styled("div")`
   width: 10px;
   height: 10px;
-  border-radius: ${(props) => props.theme.rounded.full};
-  background-color: ${(props) => props.theme.colors.stroke};
+  border-radius: ${(props) => props.theme().rounded.full};
+  background-color: ${(props) => props.theme().colors.stroke};
   margin: 0.5em 0;
   margin-right: 0.5em;
 `;
 
 export const CodeHeader = styled(Box)<IBoxProps>`
   border: 0px;
-  border-bottom-color: ${(props) => props.theme.colors.strokeAccent};
+  border-bottom-color: ${(props) => props.theme().colors.strokeAccent};
   border-bottom-style: solid;
   border-bottom-width: 1px;
   margin-bottom: 0.2em;
@@ -61,7 +61,7 @@ export const CodeBody = styled(Box)`
   position: relative;
 
   & pre {
-    background-color: ${(props) => props.theme.colors.background} !important;
+    background-color: ${(props) => props.theme().colors.background} !important;
     font-weight: 400;
     overflow: hidden;
     overflow-x: auto;
@@ -92,8 +92,8 @@ export const CopyContainer = styled("button")`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => props.theme.colors.button};
-  color: ${(props) => props.theme.colors.accent};
+  background-color: ${(props) => props.theme().colors.button};
+  color: ${(props) => props.theme().colors.accent};
   border-radius: 5px;
   padding: 0.5em;
   position: absolute;
@@ -106,16 +106,20 @@ export const TabContainer = styled("button")<TabContainerProps>`
   display: flex;
   align-items: center;
   border: 0px;
-  border-left-color: ${(props) => props.theme.colors.strokeAccent};
+  border-left-color: ${(props) => props.theme().colors.strokeAccent};
   border-left-style: solid;
   font-size: 16px;
   border-left-width: 1px;
   padding: 0 1.4em;
   height: 100%;
   background-color: ${(props) =>
-    props.active ? props.theme.colors.focus : props.theme.colors.background};
+    props.active
+      ? props.theme().colors.focus
+      : props.theme().colors.background};
   color: ${(props) =>
-    props.active ? props.theme.colors.accent : props.theme.colors.textPrimary};
+    props.active
+      ? props.theme().colors.accent
+      : props.theme().colors.textPrimary};
   cursor: pointer;
 
   @media (max-width: ${Breakpoints.sm}) {

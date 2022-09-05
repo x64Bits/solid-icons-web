@@ -25,7 +25,7 @@ export const Text = styled("span")<ITextProps>`
   font-weight: ${(props) => props.weight || "400"};
   font-size: ${(props) => props.size || "16px"};
   color: ${(props) =>
-    props.theme.colors[props.color] || props.theme.colors.textPrimary};
+    props.theme().colors[props.color] || props.theme().colors.textPrimary};
   text-align: ${(props) => props.align || "left"};
 
   & b {
@@ -64,5 +64,5 @@ export const PulseView = styled("div")<IPulseView>`
   border-radius: ${(props) => props.rounded || "0"};
   animation: ${pulseAnimation} 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   background-color: ${(props) =>
-    props.theme.colors[props.color] || props.theme.colors.surface};
+    props.theme().colors[props.color] || props.theme().colors.surface};
 `;

@@ -18,8 +18,8 @@ export const IconList = styled("section")`
   min-width: 100%;
 
   & button:hover {
-    background-color: ${(props) => props.theme.colors.focus};
-    border-color: ${(props) => props.theme.colors.surface};
+    background-color: ${(props) => props.theme().colors.focus};
+    border-color: ${(props) => props.theme().colors.surface};
   }
 
   @media (max-width: ${Breakpoints.sm}) {

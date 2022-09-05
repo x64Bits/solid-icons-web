@@ -1,12 +1,5 @@
-import {
-  createEffect,
-  createSignal,
-  Match,
-  Switch,
-  useContext,
-} from "solid-js";
+import { createEffect, createSignal, useContext } from "solid-js";
 import { JSX } from "solid-js/jsx-runtime";
-import { createStore } from "solid-js/store";
 import { ThemeProvider } from "solid-styled-components";
 import { AppContext } from "~/store/AppContext";
 
@@ -80,7 +73,6 @@ export const themes = {
 
 export default function Theme(props: IThemeProps) {
   const [theme, setTheme] = createSignal(light);
-  // const [theme, setTheme] = createStore(light);
   const [state] = useContext(AppContext);
 
   createEffect(() => {
@@ -88,18 +80,5 @@ export default function Theme(props: IThemeProps) {
     setTheme(state.darkMode ? dark : light);
   });
 
-  return (
-    <ThemeProvider id={state.darkMode} theme={theme}>
-      {props.children}
-    </ThemeProvider>
-    // <Switch>
-    //   <Match when={state.darkMode}>
-    //     <ThemeProvider id={state.darkMode} theme={dark}>
-    //       {props.children}
-    //     </ThemeProvider>
-    //   </Match>
-    //   <Match when={!state.darkMode}>
-    //   </Match>
-    // </Switch>
-  );
+  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
 }
