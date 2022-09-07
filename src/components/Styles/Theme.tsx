@@ -76,7 +76,6 @@ export default function Theme(props: IThemeProps) {
   const [state] = useContext(AppContext);
 
   createEffect(() => {
-    console.log(state.darkMode);
     setTheme(state.darkMode ? dark : light);
   });
 

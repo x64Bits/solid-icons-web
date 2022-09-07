@@ -59,6 +59,7 @@ export const CodeHeader = styled(Box)<IBoxProps>`
 export const CodeBody = styled(Box)`
   padding: 1em;
   position: relative;
+  min-height: 18px;
 
   & pre {
     background-color: ${(props) => props.theme().colors.background} !important;

@@ -1,3 +1,4 @@
+import { AiFillHeart } from "solid-icons/ai";
 import { SiPnpm, SiYarn, SiNpm } from "solid-icons/si";
 import { onMount, useContext } from "solid-js";
 import Gradient from "~/assets/Gradient";
@@ -91,9 +92,9 @@ export default function Home() {
           </ContentContainer>
         </ContentMain>
         <Box mb="2em">
-          <Flex justify="center">
+          <Flex justify="center" items="center">
             <Text color="secondary">
-              Designed with ❤️ by{" "}
+              Designed with <AiFillHeart /> by{" "}
               <Text color="accent">
                 <a href="https://www.maite.design" target="_blank">
                   Maite Sojo

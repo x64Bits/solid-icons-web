@@ -14,20 +14,26 @@ import { SearchbarContent, SearchbarWrapper } from "../../index.styles";
 import { IconList, SearchContent } from "../term.styles";
 
 export default function SearchPackage() {
-  let searchWrapperRef: HTMLDivElement;
   let contentRef: HTMLDivElement;
+  let searchWrapperRef: HTMLDivElement;
   const params = useParams();
   const shortName = createMemo(() => params.shortName);
   const icons = usePackageList(shortName);
   const [state, { setVisibleNavSearch }] = useContext(AppContext);
   const useVisibilityObserver = createVisibilityObserver({
     threshold: 0.1,
-    initialValue: true,
+    initialValue: false,
   });
   const visible = useVisibilityObserver(() => searchWrapperRef);
 
   createEffect(() => {
     setVisibleNavSearch(!visible());
+  });
+
+  createEffect(() => {
+    if (params.shortName) {
+      contentRef.scrollTo({ top: 0, behavior: "smooth" });
+    }
   });
 
   return (

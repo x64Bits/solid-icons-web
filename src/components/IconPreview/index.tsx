@@ -65,10 +65,6 @@ export default function IconPreview(props: IconPreviewProps) {
     setActiveIcon(null);
   }
 
-  createEffect(() => {
-    console.log(nextIcons());
-  });
-
   return (
     <PreviewOverlay onClick={handleClose}>
       <PreviewModal onClick={handleModalClick}>

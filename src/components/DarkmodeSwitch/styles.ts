@@ -9,7 +9,7 @@ export const DarkModeContainer = styled("button")<IDarkModeContainer>`
   height: 18px;
   border: 1px solid ${(props) => props.theme().colors.accent};
   border-radius: ${(props) => props.theme().rounded.full};
-  margin-right: 0.5em;
+  margin-right: 1em;
   position: relative;
   cursor: pointer;
 

@@ -21,7 +21,7 @@ export default function Tab(tab: ITabProps) {
   return (
     <TabContainer active={active()} onClick={handleChangeTab}>
       <Row>
-        {tab.icon}
+        <div>{tab.icon}</div>
         <Box pl="0.3em">{tab.title}</Box>
       </Row>
     </TabContainer>

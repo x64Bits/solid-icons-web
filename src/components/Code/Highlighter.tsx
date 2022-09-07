@@ -1,5 +1,5 @@
 import { getHighlighter, Lang, setCDN, Theme } from "shiki";
-import { createEffect, createSignal } from "solid-js";
+import { createEffect, createMemo, createSignal } from "solid-js";
 import { HighlighterContainer } from "./styles";
 
 interface IHighlighterProps {
@@ -9,7 +9,9 @@ interface IHighlighterProps {
 }
 
 const getCode = async (code: string, theme: Theme, lang: Lang) => {
-  setCDN("/node_modules/shiki/");
+  // Local
+  // setCDN("/node_modules/shiki/");
+  setCDN("https://unpkg.com/shiki/");
 
   return await getHighlighter({
     theme: theme || "solarized-light",
@@ -21,10 +23,17 @@ const getCode = async (code: string, theme: Theme, lang: Lang) => {
 
 export default function Highlighter(props: IHighlighterProps) {
   const [html, setHtml] = createSignal<string>();
+  const codeLocs = createMemo<number>(() => {
+    if (!props.children) return 1;
+
+    const locs = props.children.split("\n");
+
+    return locs.length;
+  });
 
   createEffect(async () => {
     setHtml(await getCode(props.children, props.theme, props.lang));
   });
 
-  return <HighlighterContainer innerHTML={html()}></HighlighterContainer>;
+  return <HighlighterContainer innerHTML={html()} />;
 }

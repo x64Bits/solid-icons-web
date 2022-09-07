@@ -25,7 +25,9 @@ export default function Navbar(props: INavbarProps) {
 
   createEffect(async () => {
     const metaFile = await getMetaFile();
-    setMetadata(metaFile);
+    const sorted =
+      metaFile.sort((a, b) => a.packName.localeCompare(b.packName)) || [];
+    setMetadata(sorted);
   });
 
   function handleCloseNavbar() {
