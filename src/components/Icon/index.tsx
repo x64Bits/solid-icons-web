@@ -1,7 +1,7 @@
 import { createVisibilityObserver } from "@solid-primitives/intersection-observer";
 import { Match, Switch, useContext } from "solid-js";
 import { AppContext } from "~/store/AppContext";
-import { PulseView } from "../Common/styles";
+import { Flex, PulseView } from "../Common/styles";
 import HighlightName from "../HighlightName";
 import Glyph from "./Glyph";
 import { IconContainer } from "./styles";
@@ -30,7 +30,9 @@ export default function Icon(props: IIConProps) {
           <Glyph name={props.name} />
         </Match>
         <Match when={!visible()}>
-          <PulseView size="1em" />
+          <Flex justify="center">
+            <PulseView size="2.8em" />
+          </Flex>
         </Match>
       </Switch>
       <HighlightName name={props.name} term={props.term} />
