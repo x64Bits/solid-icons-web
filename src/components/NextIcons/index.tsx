@@ -24,7 +24,7 @@ export default function NextIcons(props: NextIconsProps) {
   return (
     <NextIconsContainer>
       <NextIconsLabelContainer>
-        <NextIconsLabel>Next Icons</NextIconsLabel>
+        <NextIconsLabel>Next icons</NextIconsLabel>
       </NextIconsLabelContainer>
       <NextIconsList>
         <NextIconsGrid>

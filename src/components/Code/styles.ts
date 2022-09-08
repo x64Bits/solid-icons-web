@@ -93,7 +93,7 @@ export const CopyContainer = styled("button")`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => props.theme().colors.button};
+  background-color: ${(props) => props.theme().colors.backgroundLighter};
   color: ${(props) => props.theme().colors.accent};
   border-radius: 5px;
   padding: 0.5em;
@@ -115,7 +115,7 @@ export const TabContainer = styled("button")<TabContainerProps>`
   height: 100%;
   background-color: ${(props) =>
     props.active
-      ? props.theme().colors.focus
+      ? props.theme().colors.backgroundLighter
       : props.theme().colors.background};
   color: ${(props) =>
     props.active

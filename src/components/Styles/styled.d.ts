@@ -15,20 +15,14 @@ export interface IShadow {
 export interface IColors {
   accent: string;
   background: string;
-  backgroundSecondary: string;
-  button: string;
+  backgroundLighter: string;
   surface: string;
-  surfaceSecondary: string;
-  surfaceModal: string;
+  surfaceLighter: string;
   stroke: string;
   strokeAccent: string;
   textPrimary: string;
-  focus: string;
-  secondary: string;
+  textSecondary: string;
   overlay: string;
-
-  strokeFocus: string;
-  surfaceFocus: string;
 }
 
 type Theme = Accessor<{

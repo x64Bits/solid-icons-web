@@ -18,7 +18,7 @@ export const IconList = styled("section")`
   min-width: 100%;
 
   & button:hover {
-    background-color: ${(props) => props.theme().colors.focus};
+    background-color: ${(props) => props.theme().colors.backgroundLighter};
     border-color: ${(props) => props.theme().colors.surface};
   }
 

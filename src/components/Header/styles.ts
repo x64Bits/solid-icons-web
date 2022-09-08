@@ -48,7 +48,7 @@ export const HeaderItemsContainer = styled("div")`
 export const HeaderSearchContainer = styled("div")`
   width: 50%;
 
-  @media (max-width: ${Breakpoints.sm}) {
+  @media (max-width: ${Breakpoints.md}) {
     & {
       display: none;
     }
@@ -65,6 +65,12 @@ export const MenuButton = styled("button")`
   }
 
   @media (max-width: ${Breakpoints.sm}) {
+    & {
+      display: flex;
+    }
+  }
+
+  @media (max-width: ${Breakpoints.md}) {
     & {
       display: flex;
     }

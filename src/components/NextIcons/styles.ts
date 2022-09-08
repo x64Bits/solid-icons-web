@@ -10,7 +10,7 @@ export const NextIconsContainer = styled("div")`
 `;
 
 export const NextIconsList = styled("div")`
-  background-color: ${(props) => props.theme().colors.surfaceModal};
+  background-color: ${(props) => props.theme().colors.surfaceLighter};
   border-top: 1px solid ${(props) => props.theme().colors.strokeAccent};
   width: 100%;
 
@@ -42,7 +42,7 @@ export const NextIconsGrid = styled("div")`
 `;
 
 export const NextIconsLabelContainer = styled("div")`
-  background-color: ${(props) => props.theme().colors.surfaceModal};
+  background-color: ${(props) => props.theme().colors.surfaceLighter};
   padding: 8px 20px;
   border-top-left-radius: ${(props) => props.theme().rounded.medium};
   border-top-right-radius: ${(props) => props.theme().rounded.medium};

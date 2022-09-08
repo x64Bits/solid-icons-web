@@ -22,20 +22,14 @@ export const light = {
   colors: {
     accent: "#2E49A8",
     background: "#F4F8FF",
-    backgroundSecondary: "#FFF",
-    button: "#DCE4F7",
     surface: "#D0DAF2",
-    surfaceSecondary: "#2F3E53",
-    surfaceModal: "#E8EFFF",
+    surfaceLighter: "#E8EFFF",
     stroke: "#C2D1F6",
     strokeAccent: "#C2D1F6",
     textPrimary: "#00072D",
-    focus: "#ECF2FF",
-    secondary: "#ACACAC",
+    backgroundLighter: "#ECF2FF",
+    textSecondary: "#ACACAC",
     overlay: "rgba(244, 248, 255, 0.9)",
-
-    strokeFocus: "#C2D1F6",
-    surfaceFocus: "#F8FAFF",
   },
   rounded,
   shadow,
@@ -43,26 +37,20 @@ export const light = {
 
 export const dark = {
   colors: {
-    accent: "#6083B5",
+    accent: "#7D9AC4",
     background: "#0E192E",
-    backgroundSecondary: "#0C172A",
-    button: "#14223A",
     stroke: "#2F3E53",
     strokeAccent: "#6083B5",
     surface: "#0C172A",
-    surfaceSecondary: "#2F3E53",
-    surfaceModal: "#2C394B",
+    surfaceLighter: "#2C394B",
     textPrimary: "#D0D6DD",
-    focus: "#2F3E53",
-    secondary: "#ACACAC",
+    backgroundLighter: "#14223A",
+    textSecondary: "#ACACAC",
     overlay: "rgba(12, 23, 42, 0.9)",
-
-    strokeFocus: "#C2D1F6",
-    surfaceFocus: "#0C172A",
   },
   rounded,
   shadow: {
-    unfocus: "0px",
+    unfocus: "0px 0px 0px transparent",
   },
 };
 

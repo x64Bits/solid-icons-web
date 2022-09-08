@@ -11,10 +11,17 @@ interface INavItemProps {
 }
 
 const responsiveNavbar = (props: DefaultTheme) => /*css*/ `
-  @media (max-width: ${Breakpoints.sm}) {
+@media (max-width: ${Breakpoints.sm}) {
+  & {
+    width: 80vw;
+
+  }
+}
+
+  @media (max-width: ${Breakpoints.md}) {
     & {
+      width: 40vw;
       position: absolute;
-      width: 80vw;
       background-color: ${props().colors.surface};
       z-index: 2;
       max-height: calc(97vh - ${HEADER_DEFAULT_HEIGHT}px);
@@ -72,16 +79,16 @@ export const NavItemButton = styled("button")<INavItemProps>`
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  padding: 13px 12px;
+  padding: 13px 18px;
   margin: 0 10px;
   border-radius: ${(props) => props.theme().rounded.full};
   color: ${(props) => props.theme().colors.textPrimary};
   background-color: ${(props) =>
-    props.active ? props.theme().colors.focus : "transparent"};
+    props.active ? props.theme().colors.backgroundLighter : "transparent"};
   color: ${(props) => (props.active ? props.theme().colors.accent : "inherit")};
 
   &:hover {
-    background-color: ${(props) => props.theme().colors.focus};
+    background-color: ${(props) => props.theme().colors.backgroundLighter};
     color: ${(props) => props.theme().colors.accent};
   }
 `;

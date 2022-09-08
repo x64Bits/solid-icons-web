@@ -29,7 +29,7 @@ export const PreviewOverlay = styled("div")`
 
 export const PreviewModal = styled("div")`
   width: 60%;
-  background-color: ${(props) => props.theme().colors.backgroundSecondary};
+  background-color: ${(props) => props.theme().colors.background};
   border: 1px solid ${(props) => props.theme().colors.strokeAccent};
   box-shadow: ${(props) => props.theme().shadow.unfocus};
   border-radius: ${(props) => props.theme().rounded.medium};
@@ -45,8 +45,8 @@ export const PreviewModal = styled("div")`
 `;
 
 export const CloseButton = styled("button")`
-  background-color: ${(props) => props.theme().colors.surfaceModal};
-  color: ${(props) => props.theme().colors.secondary};
+  background-color: ${(props) => props.theme().colors.surfaceLighter};
+  color: ${(props) => props.theme().colors.textSecondary};
   border: 1px solid ${(props) => props.theme().colors.strokeAccent};
   border-top: 0;
   border-right: 0;
@@ -70,11 +70,13 @@ export const PreviewContent = styled("div")`
   padding: 2em;
   padding-bottom: 2em;
 
-  @media (max-width: ${Breakpoints.sm}) {
+  @media (max-width: ${Breakpoints.md}) {
     & {
       grid-template-columns: repeat(1, minmax(0, 1fr));
       padding: 1em;
       margin-top: 3em;
+      max-height: 450px;
+      overflow-y: auto;
     }
   }
 `;
@@ -103,6 +105,25 @@ export const PreviewIconContainer = styled("div")`
     width: 200px;
     height: 200px;
     border: ${(props) => props.theme().colors.textPrimary};
+  }
+
+  @media (max-width: ${Breakpoints.md}) {
+    & {
+      margin-bottom: 1em;
+      width: calc(100% - 4em);
+    }
+
+    & svg {
+      width: 150;
+      height: 150px;
+    }
+  }
+
+  @media (max-width: ${Breakpoints.md}) {
+    & {
+      margin-bottom: 1em;
+      width: 100%;
+    }
   }
 `;
 

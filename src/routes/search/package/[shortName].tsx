@@ -22,7 +22,7 @@ export default function SearchPackage() {
   const [state, { setVisibleNavSearch }] = useContext(AppContext);
   const useVisibilityObserver = createVisibilityObserver({
     threshold: 0.1,
-    initialValue: false,
+    initialValue: true,
   });
   const visible = useVisibilityObserver(() => searchWrapperRef);
 

@@ -35,7 +35,7 @@ export const SearchBarContainer = styled("div")`
   cursor: text;
 
   &:focus-within {
-    background-color: ${(props) => props.theme().colors.focus};
+    background-color: ${(props) => props.theme().colors.backgroundLighter};
   }
 `;
 
@@ -85,7 +85,7 @@ export const SearchShortcut = styled("div")`
 `;
 
 export const SearchShortcutText = styled("span")`
-  @media (max-width: ${Breakpoints.sm}) {
+  @media (max-width: ${Breakpoints.md}) {
     & {
       display: none;
     }

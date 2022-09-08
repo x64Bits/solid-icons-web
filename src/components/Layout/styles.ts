@@ -19,6 +19,18 @@ export const LayoutContainer = styled("div")`
       grid-template-columns: 0fr 1.6fr;
     }
   }
+
+  @media (max-width: ${Breakpoints.md}) {
+    & {
+      grid-template-columns: 0fr 1.6fr;
+    }
+  }
+
+  @media (min-width: ${Breakpoints.md}) {
+    & {
+      grid-template-columns: 0.2fr 0.8fr;
+    }
+  }
 `;
 
 export const HeaderLayout = styled("div")`

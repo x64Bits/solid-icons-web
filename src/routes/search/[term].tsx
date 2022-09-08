@@ -23,6 +23,7 @@ export default function SearchTerm() {
   const [state, { setVisibleNavSearch }] = useContext(AppContext);
   const useVisibilityObserver = createVisibilityObserver({
     threshold: 0.2,
+    initialValue: true,
   });
   const visible = useVisibilityObserver(() => searchWrapperRef);
   const theme = useTheme();
@@ -69,7 +70,7 @@ export default function SearchTerm() {
                 <Flex justify="center" direction="column" items="center">
                   <BsSlashCircleFill
                     size="4em"
-                    color={theme().colors.strokeFocus}
+                    color={theme().colors.strokeAccent}
                   />
                   <Box mt="1.5em">
                     <Text size="2em" weight="300">
