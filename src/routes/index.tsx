@@ -92,7 +92,7 @@ export default function Home() {
           </ContentContainer>
         </ContentMain>
         <Box mb="2em">
-          <Flex justify="center" items="center">
+          <Flex justify="center">
             <Text color="textSecondary">
               Designed with <AiFillHeart /> by{" "}
               <Text color="accent">

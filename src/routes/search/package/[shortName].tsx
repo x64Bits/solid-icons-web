@@ -1,5 +1,12 @@
 import { createVisibilityObserver } from "@solid-primitives/intersection-observer";
-import { createEffect, createMemo, For, Show, useContext } from "solid-js";
+import {
+  createEffect,
+  createMemo,
+  createSignal,
+  For,
+  Show,
+  useContext,
+} from "solid-js";
 import { useParams } from "solid-start/router";
 import { Box, Row, Text } from "~/components/Common/styles";
 import Icon from "~/components/Icon";
@@ -8,8 +15,10 @@ import Layout from "~/components/Layout";
 import { ContentLayout } from "~/components/Layout/styles";
 import PackageInfo from "~/components/PackageInfo";
 import Searchbar from "~/components/Searchbar";
+import { INITIAL_PACKAGE } from "~/constants/packages";
 import { usePackageList } from "~/hooks/use-icon-list";
 import { AppContext } from "~/store/AppContext";
+import getMetaFile, { MetaFile } from "~/utils/get-meta-file";
 import { SearchbarContent, SearchbarWrapper } from "../../index.styles";
 import { IconList, SearchContent } from "../term.styles";
 
@@ -17,6 +26,7 @@ export default function SearchPackage() {
   let contentRef: HTMLDivElement;
   let searchWrapperRef: HTMLDivElement;
   const params = useParams();
+  const [pack, setPack] = createSignal<MetaFile>(INITIAL_PACKAGE);
   const shortName = createMemo(() => params.shortName);
   const icons = usePackageList(shortName);
   const [state, { setVisibleNavSearch }] = useContext(AppContext);
@@ -25,6 +35,18 @@ export default function SearchPackage() {
     initialValue: true,
   });
   const visible = useVisibilityObserver(() => searchWrapperRef);
+
+  createEffect(async () => {
+    const packageId = shortName().toLowerCase();
+    const metaFile = await getMetaFile();
+
+    const matchFile = (currentPack: MetaFile) =>
+      currentPack.shortName === packageId;
+
+    const payload = metaFile.find(matchFile);
+
+    setPack(payload);
+  });
 
   createEffect(() => {
     setVisibleNavSearch(!visible());
@@ -37,7 +59,7 @@ export default function SearchPackage() {
   });
 
   return (
-    <Layout activePackage={shortName()}>
+    <Layout activePackage={shortName()} title={pack().packName}>
       <ContentLayout ref={contentRef}>
         <SearchContent>
           <Box px="1em">
@@ -59,7 +81,7 @@ export default function SearchPackage() {
               </SearchbarWrapper>
             </SearchbarContent>
             <Show when={icons().length}>
-              <PackageInfo shortName={shortName} />
+              <PackageInfo pack={pack} />
               <Box mt="2em">
                 <Row justify="center">
                   <IconList>
