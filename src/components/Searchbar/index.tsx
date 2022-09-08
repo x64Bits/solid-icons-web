@@ -27,6 +27,7 @@ interface SearchbarProps {
   initialValue?: string;
   fromHeader?: boolean;
   compact?: boolean;
+  autofocus?: boolean;
 }
 
 export default function Searchbar(props: SearchbarProps) {
@@ -104,6 +105,7 @@ export default function Searchbar(props: SearchbarProps) {
             onInput={handleChangeText}
             value={props.initialValue}
             compact={props.compact}
+            autofocus={props.autofocus}
           />
         </form>
       </SearchPlaceholderContainer>

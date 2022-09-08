@@ -4,7 +4,10 @@ import { defineConfig } from "vite";
 import path from "path";
 
 export default defineConfig({
-  plugins: [solid({ adapter: vercel({ edge: true }) })],
+  plugins: [solid({ adapter: vercel() })],
+  build: {
+    ssr: true,
+  },
   resolve: {
     alias: {
       "@public": "public",

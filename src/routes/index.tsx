@@ -64,7 +64,7 @@ export default function Home() {
               </ContentDescription>
               <SearchbarContent>
                 <SearchbarWrapper>
-                  <Searchbar />
+                  <Searchbar autofocus={true} />
                   <RecentlySearched />
                 </SearchbarWrapper>
               </SearchbarContent>
