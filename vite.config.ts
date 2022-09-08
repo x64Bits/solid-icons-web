@@ -4,7 +4,7 @@ import solid from "solid-start";
 import vercel from "solid-start-vercel";
 
 export default defineConfig({
-  plugins: [solid({ adapter: vercel() })],
+  plugins: [solid({ adapter: vercel({ edge: true }) })],
   resolve: {
     alias: {
       "@public": "public",
