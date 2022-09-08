@@ -1,9 +1,10 @@
 import solid from "solid-start/vite";
+import vercel from "solid-start-vercel";
 import { defineConfig } from "vite";
 import path from "path";
 
 export default defineConfig({
-  plugins: [solid()],
+  plugins: [solid({ adapter: vercel() })],
   resolve: {
     alias: {
       "@public": "public",
