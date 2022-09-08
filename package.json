@@ -28,6 +28,7 @@
     "@solid-primitives/intersection-observer": "^2.0.0",
     "shiki": "^0.11.1",
     "solid-icons": "^1.0.1",
+    "solid-start-vercel": "^0.1.0-alpha.102",
     "solid-styled-components": "^0.28.4"
   }
 }
