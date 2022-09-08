@@ -13,7 +13,8 @@
     "solid-app-router": "^0.4.1",
     "solid-js": "^1.4.0",
     "solid-meta": "^0.27.3",
-    "solid-start": "next",
+    "solid-start": "0.1.0-alpha.89",
+    "solid-start-vercel": "0.1.0-alpha.89",
     "solid-start-node": "next",
     "typescript": "^4.4.3",
     "undici": "^4.12.2",
@@ -28,7 +29,6 @@
     "@solid-primitives/intersection-observer": "^2.0.0",
     "shiki": "^0.11.1",
     "solid-icons": "^1.0.1",
-    "solid-start-vercel": "^0.1.0-alpha.102",
     "solid-styled-components": "^0.28.4"
   }
 }
