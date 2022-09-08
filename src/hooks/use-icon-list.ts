@@ -21,12 +21,8 @@ export default function useIconList(term: Accessor<string>): TReturnProps {
       const result = data.filter((iconName: string) =>
         iconName.toLowerCase().includes(termLowerCase)
       );
-
-      // TODO: Remove this
-      setTimeout(() => {
-        setIcons(result);
-        setLoading(false);
-      }, 750);
+      setIcons(result);
+      setLoading(false);
     });
   });
 

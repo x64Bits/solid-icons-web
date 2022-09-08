@@ -43,9 +43,11 @@ export const Flex = styled("div")<IFlexProps>`
 
   @media (max-width: ${Breakpoints.sm}) {
     & {
-      justify-content: ${(props) => props["sm:justify"] || "inherit"};
-      align-items: ${(props) => props["sm:items"] || "inherit"};
-      flex-direction: ${(props) => props["sm:direction"] || "inherit"};
+      justify-content: ${(props) =>
+        props["sm:justify"] || props.justify || "unset"};
+      align-items: ${(props) => props["sm:items"] || props.items || "unset"};
+      flex-direction: ${(props) =>
+        props["sm:direction"] || props.direction || "unset"};
     }
   }
 `;

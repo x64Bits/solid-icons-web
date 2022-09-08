@@ -15,7 +15,6 @@ export const IconList = styled("section")`
   grid-auto-rows: minmax(min-content, max-content);
   gap: 1em;
   padding: 1em;
-  min-width: 100%;
 
   & button:hover {
     background-color: ${(props) => props.theme().colors.backgroundLighter};
