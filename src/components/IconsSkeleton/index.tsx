@@ -18,12 +18,12 @@ export default function IconsSkeleton(props: IconsSkeletonProps) {
           <For each={count()}>
             {() => (
               <IconContainer>
-                <IconPlaceholder size="44%" color="focus" />
+                <IconPlaceholder size="44%" color="backgroundLighter" />
                 <Box px="1em" mt="1em">
                   <PulseView
                     width="100%"
                     height="0.5em"
-                    color="focus"
+                    color="backgroundLighter"
                     rounded="999px"
                   />
                 </Box>

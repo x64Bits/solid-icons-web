@@ -56,7 +56,7 @@ export interface ITextProps {
 export interface IPulseView {
   size?: string;
   rounded?: string;
-  color?: string;
+  color?: TColors;
   width?: string;
   height?: string;
 }
