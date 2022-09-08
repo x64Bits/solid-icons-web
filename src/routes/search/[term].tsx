@@ -1,7 +1,7 @@
 import { createVisibilityObserver } from "@solid-primitives/intersection-observer";
 import { createEffect, createMemo, For, Show, useContext } from "solid-js";
 import { BsSlashCircleFill } from "solid-icons/bs";
-import { useParams } from "solid-start/router";
+import { useParams } from "@solidjs/router";
 import { Box, Flex, Row, Text } from "~/components/Common/styles";
 import Icon from "~/components/Icon";
 import IconPreview from "~/components/IconPreview";

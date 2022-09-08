@@ -8,7 +8,7 @@ import {
   Switch,
   useContext,
 } from "solid-js";
-import { useNavigate } from "solid-start/router";
+import { useNavigate } from "@solidjs/router";
 
 import {
   SearchBarContainer,

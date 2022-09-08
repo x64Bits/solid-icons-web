@@ -7,7 +7,7 @@ import {
   Show,
   useContext,
 } from "solid-js";
-import { useParams } from "solid-start/router";
+import { useParams } from "@solidjs/router";
 import { Box, Row, Text } from "~/components/Common/styles";
 import Icon from "~/components/Icon";
 import IconPreview from "~/components/IconPreview";

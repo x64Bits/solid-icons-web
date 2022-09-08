@@ -1,4 +1,4 @@
-import { NavLink } from "solid-app-router";
+import { NavLink } from "@solidjs/router";
 import { For, Show } from "solid-js";
 import createLocalStorage from "~/hooks/create-local-storage";
 import { RecentlySearchedContainer } from "./styles";

@@ -1,4 +1,4 @@
-import { NavLink } from "solid-app-router";
+import { NavLink } from "@solidjs/router";
 import { AiFillGithub } from "solid-icons/ai";
 import { createEffect, createSignal, Show, useContext } from "solid-js";
 import { AppContext } from "~/store/AppContext";

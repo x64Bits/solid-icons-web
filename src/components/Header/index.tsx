@@ -1,4 +1,4 @@
-import { NavLink } from "solid-start/router";
+import { NavLink } from "@solidjs/router";
 import { AiFillGithub } from "solid-icons/ai";
 import { BiRegularMenu } from "solid-icons/bi";
 import { css } from "solid-styled-components";

@@ -94,7 +94,11 @@ export default function Home() {
         <Box mb="2em">
           <Flex justify="center">
             <Text color="textSecondary">
-              Designed with <AiFillHeart /> by{" "}
+              Designed with{" "}
+              <div>
+                <AiFillHeart />
+              </div>{" "}
+              by{" "}
               <Text color="accent">
                 <a href="https://www.maite.design" target="_blank">
                   Maite Sojo
