@@ -23,13 +23,6 @@ const getCode = async (code: string, theme: Theme, lang: Lang) => {
 
 export default function Highlighter(props: IHighlighterProps) {
   const [html, setHtml] = createSignal<string>();
-  const codeLocs = createMemo<number>(() => {
-    if (!props.children) return 1;
-
-    const locs = props.children.split("\n");
-
-    return locs.length;
-  });
 
   createEffect(async () => {
     setHtml(await getCode(props.children, props.theme, props.lang));
