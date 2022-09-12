@@ -55,7 +55,7 @@ export default function Searchbar(props: SearchbarProps) {
       return;
     }
 
-    if (event.metaKey && event.key === "k") {
+    if ((event.metaKey || event.ctrlKey) && event.key === "k") {
       inputRef.focus();
     }
   }

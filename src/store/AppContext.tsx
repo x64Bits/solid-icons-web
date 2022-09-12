@@ -27,7 +27,7 @@ export type IAppContextValue = [
 const initialState = {
   visibleNavbar: false,
   activeIcon: null,
-  darkMode: false,
+  darkMode: true,
   visibleNavSearch: false,
 };
 
@@ -42,7 +42,7 @@ export const AppContext = createContext<IAppContextValue>([
 ]);
 
 export default function AppContextProvider(props: IAppContextProviderProps) {
-  const [storedDarkMode, setDarkMode] = createLocalStorage("darkMode", false);
+  const [storedDarkMode, setDarkMode] = createLocalStorage("darkMode", true);
   const [state, setState] = createStore({
     visibleNavbar: false,
     activeIcon: null,

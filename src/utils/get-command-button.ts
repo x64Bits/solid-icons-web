@@ -7,7 +7,7 @@ export default function getCommandButton() {
   }
 
   const browserNavigator = navigator as INavigator;
-  let platform =
+  const platform =
     browserNavigator?.userAgentData?.platform ||
     navigator?.platform ||
     "unknown";
