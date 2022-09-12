@@ -86,3 +86,7 @@ export const SearchbarWrapper = styled("div")<ISearchbarWrapperProps>`
     }
   }
 `;
+
+export const HeartWrapper = styled("div")`
+  margin: 0 0.2em;
+`;

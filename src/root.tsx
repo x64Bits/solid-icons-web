@@ -11,6 +11,7 @@ import {
   Scripts,
   Title,
 } from "solid-start";
+import "./styles.css";
 import GlobalStyles from "./components/Styles/GlobalStyles";
 import Theme from "./components/Styles/Theme";
 import AppContextProvider from "./store/AppContext";

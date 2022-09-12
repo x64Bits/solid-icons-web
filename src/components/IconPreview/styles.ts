@@ -25,6 +25,13 @@ export const PreviewOverlay = styled("div")`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: ${Breakpoints.sm}) {
+    & {
+      align-items: flex-start;
+      padding-top: 2em;
+    }
+  }
 `;
 
 export const PreviewModal = styled("div")`

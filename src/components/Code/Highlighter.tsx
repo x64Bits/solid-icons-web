@@ -1,5 +1,6 @@
 import { getHighlighter, Lang, setCDN, Theme } from "shiki";
-import { createEffect, createMemo, createSignal } from "solid-js";
+import { createEffect, createMemo, createSignal, Show } from "solid-js";
+import { Flex, PulseView } from "../Common/styles";
 import { HighlighterContainer } from "./styles";
 
 interface IHighlighterProps {
@@ -28,5 +29,18 @@ export default function Highlighter(props: IHighlighterProps) {
     setHtml(await getCode(props.children, props.theme, props.lang));
   });
 
-  return <HighlighterContainer innerHTML={html()} />;
+  return (
+    <>
+      <Show
+        when={html()}
+        fallback={
+          <Flex>
+            <PulseView height="18px" width="100%" rounded="4px" />
+          </Flex>
+        }
+      >
+        <HighlighterContainer innerHTML={html()} />
+      </Show>
+    </>
+  );
 }

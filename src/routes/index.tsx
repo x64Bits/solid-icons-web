@@ -1,9 +1,10 @@
 import { AiFillHeart } from "solid-icons/ai";
+import { Bs1SquareFill } from "solid-icons/bs";
 import { SiPnpm, SiYarn, SiNpm } from "solid-icons/si";
 import { onMount, useContext } from "solid-js";
 import Gradient from "~/assets/Gradient";
 import Code from "~/components/Code";
-import { Box, Flex, Text } from "~/components/Common/styles";
+import { Box, Flex, Row, Text } from "~/components/Common/styles";
 import Layout from "~/components/Layout";
 import { ContentLayout } from "~/components/Layout/styles";
 import RecentlySearched from "~/components/RecentlySearched";
@@ -15,6 +16,7 @@ import {
   ContentMain,
   ContentTitle,
   GradientContainer,
+  HeartWrapper,
   SearchbarContent,
   SearchbarWrapper,
 } from "./index.styles";
@@ -48,66 +50,72 @@ export default function Home() {
   });
 
   return (
-    <Layout title="Home">
-      <ContentLayout>
-        <ContentMain>
-          <GradientContainer>
-            <Gradient width="100%" />
-          </GradientContainer>
-          <ContentContainer>
-            <Box px="1em">
-              <ContentTitle>Solid Icons</ContentTitle>
-              <ContentDescription>
-                A collection of <b>16</b> open source icon libraries packed into
-                one for easy use in your SolidJS project with over <b>17734</b>{" "}
-                icons.
-              </ContentDescription>
-              <SearchbarContent>
-                <SearchbarWrapper>
-                  <Searchbar autofocus={true} />
-                  <RecentlySearched />
-                </SearchbarWrapper>
-              </SearchbarContent>
-              <Box mt="3em">
-                <Text>Let's start by installing the library</Text>
+    <div>
+      <Layout title="Home">
+        <ContentLayout>
+          <ContentMain>
+            <GradientContainer>
+              <Gradient width="100%" />
+            </GradientContainer>
+            <ContentContainer>
+              <Box px="1em">
+                <ContentTitle>Solid Icons</ContentTitle>
+                <ContentDescription>
+                  A collection of <b>16</b> open source icon libraries packed
+                  into one for easy use in your SolidJS project with over{" "}
+                  <b>17734</b> icons.
+                </ContentDescription>
+                <SearchbarContent>
+                  <SearchbarWrapper>
+                    <Searchbar autofocus={true} />
+                    <RecentlySearched />
+                  </SearchbarWrapper>
+                </SearchbarContent>
+                <Box mt="3em">
+                  <Text>Let's start by installing the library</Text>
+                </Box>
+                <Code
+                  samples={installSamples}
+                  lang="css"
+                  theme={state.darkMode ? "github-dark" : "github-light"}
+                  header
+                  locs
+                />
+                <Box mt="3em">
+                  <Text>Basic use</Text>
+                </Box>
+                <Code
+                  samples={basicUseSample}
+                  lang="jsx"
+                  theme={state.darkMode ? "github-dark" : "github-light"}
+                  header
+                  locs
+                />
               </Box>
-              <Code
-                samples={installSamples}
-                lang="css"
-                theme={state.darkMode ? "github-dark" : "github-light"}
-                header
-                locs
-              />
-              <Box mt="3em">
-                <Text>Basic use</Text>
-              </Box>
-              <Code
-                samples={basicUseSample}
-                lang="jsx"
-                theme={state.darkMode ? "github-dark" : "github-light"}
-                header
-                locs
-              />
-            </Box>
-          </ContentContainer>
-        </ContentMain>
-        <Box mb="2em">
-          <Flex justify="center">
-            <Text color="textSecondary">
-              Designed with{" "}
-              <div>
-                <AiFillHeart />
-              </div>{" "}
-              by{" "}
-              <Text color="accent">
-                <a href="https://www.maite.design" target="_blank">
-                  Maite Sojo
-                </a>
+            </ContentContainer>
+          </ContentMain>
+          <Box mb="2em">
+            <Flex justify="center">
+              <Text color="textSecondary">
+                <Row>
+                  Designed with{" "}
+                  <Box mx="0.25em">
+                    <AiFillHeart />
+                  </Box>{" "}
+                  by{" "}
+                  <Text color="accent">
+                    <Box mx="0.25em">
+                      <a href="https://www.maite.design" target="_blank">
+                        Maite Sojo
+                      </a>
+                    </Box>
+                  </Text>
+                </Row>
               </Text>
-            </Text>
-          </Flex>
-        </Box>
-      </ContentLayout>
-    </Layout>
+            </Flex>
+          </Box>
+        </ContentLayout>
+      </Layout>
+    </div>
   );
 }

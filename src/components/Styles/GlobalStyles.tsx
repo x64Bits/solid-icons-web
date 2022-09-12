@@ -1,11 +1,7 @@
 import { createGlobalStyles } from "solid-styled-components";
-import { reset } from "./Reset";
 
 const GlobalStyles = () => {
-  const Styles = createGlobalStyles`
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
-    ${reset};
-    
+  const Styles = createGlobalStyles`    
     html, body {
       font-family: 'Inter', sans-serif;
       font-style: normal;

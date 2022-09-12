@@ -11,14 +11,18 @@ interface INavItemProps {
 }
 
 const responsiveNavbar = (props: DefaultTheme) => /*css*/ `
-@media (max-width: ${Breakpoints.sm}) {
-  & {
-    width: 80vw;
-
+  @media (max-width: ${Breakpoints.sm}) {
+    & {
+      width: 80vw;
+      z-index: 2;
+      max-height: calc(97vh - ${HEADER_DEFAULT_HEIGHT}px);
+      background-color: ${props().colors.surface};
+      overflow-y: auto;
+      position: absolute;
+    }
   }
-}
 
-  @media (max-width: ${Breakpoints.md}) {
+  @media (min-width: ${Breakpoints.md}) {
     & {
       width: 40vw;
       position: absolute;

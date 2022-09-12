@@ -3,12 +3,12 @@
   "scripts": {
     "dev": "solid-start dev",
     "build": "solid-start build",
-    "start": "solid-start start"
+    "start": "solid-start start",
+    "dep": "rm -rf node_modules/.vite && yarn dev"
   },
   "type": "module",
   "devDependencies": {
     "solid-start-node": "0.1.0-alpha.101",
-    "solid-start-vercel": "^0.1.0-alpha.102",
     "typescript": "^4.8.2",
     "vite": "^3.0.9"
   },
@@ -18,8 +18,9 @@
     "@solidjs/router": "^0.4.3",
     "shiki": "^0.11.1",
     "solid-icons": "^1.0.1",
-    "solid-js": "^1.5.4",
+    "solid-js": "1.5.4",
     "solid-start": "0.1.0-alpha.101",
+    "solid-start-netlify": "0.1.0-alpha.101",
     "solid-styled-components": "^0.28.4",
     "undici": "^5.10.0"
   },
