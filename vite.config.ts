@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 import path from "path";
 
 export default defineConfig({
-  plugins: [solid({ adapter: netlify({ edge: true }) })],
+  plugins: [solid({ adapter: netlify() })],
   resolve: {
     alias: {
       "@public": "public",
