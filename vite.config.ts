@@ -5,6 +5,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [solid({ adapter: netlify() })],
+  // plugins: [solid({ adapter: node() })],
   resolve: {
     alias: {
       "@public": "public",

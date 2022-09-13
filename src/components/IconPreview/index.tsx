@@ -88,7 +88,7 @@ export default function IconPreview(props: IconPreviewProps) {
 
   const jsxSample = createMemo(() => [
     {
-      content: `<${state.activeIcon} size={24} color="#000000" />`,
+      content: `<${state.activeIcon} />`,
     },
   ]);
 
@@ -138,9 +138,7 @@ export default function IconPreview(props: IconPreviewProps) {
             </Box>
             <Box mt="1em">
               <Box mb="1em">
-                <Text>
-                  <Row>Use separately</Row>
-                </Text>
+                <Text>Use without the library</Text>
               </Box>
               <CopyActionContainer>
                 <CopyActionButton onClick={onCopyJSX}>
