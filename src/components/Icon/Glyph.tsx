@@ -29,7 +29,7 @@ export default function Glyph(props: IGlyphProps) {
   return (
     <>
       {iconString() ? (
-        <div>{IconTemplate(iconString(), {})}</div>
+        <div id="glyph-svg-container">{IconTemplate(iconString(), {})}</div>
       ) : (
         <IconPlaceholder size="44%" class="icon-placeholder" />
       )}

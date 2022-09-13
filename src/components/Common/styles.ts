@@ -68,3 +68,24 @@ export const PulseView = styled("div")<IPulseView>`
   background-color: ${(props) =>
     props.theme().colors[props.color] || props.theme().colors.surface};
 `;
+
+export const CopyActionContainer = styled("div")`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 1em;
+  font-size: 16px;
+`;
+
+export const CopyActionButton = styled("button")`
+  width: 100%;
+  background-color: ${(props) => props.theme().colors.backgroundLighter};
+  color: ${(props) => props.theme().colors.accent};
+  padding: 1em 0;
+  border-radius: ${(props) => props.theme().rounded.small};
+  cursor: pointer;
+
+  &:hover {
+    color: ${(props) => props.theme().colors.textPrimary};
+    background-color: ${(props) => props.theme().colors.surfaceLighter};
+  }
+`;

@@ -4,7 +4,6 @@ import {
   createSignal,
   For,
   JSX,
-  lazy,
   Match,
   Show,
   Suspense,
@@ -24,6 +23,7 @@ import {
   TabsRow,
 } from "./styles";
 import Tab from "./Tab";
+import copyToClipboard from "~/utils/copy-to-clipboard";
 
 export interface CodeSample {
   title?: string;
@@ -39,20 +39,14 @@ export interface ICodeProps {
   locs?: boolean;
 }
 
-// const Highlighter = lazy(() => import("./Highlighter"));
-
 export default function Code(props: ICodeProps) {
   const [activeTab, setActiveTab] = createSignal(0);
   const [copied, setCopied] = createSignal(false);
   const activeSample = createMemo(() => props.samples[activeTab()].content);
 
   function handleCopy() {
-    const textarea = document.createElement("textarea");
-    textarea.value = activeSample();
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand("copy");
-    textarea.remove();
+    const text = activeSample();
+    copyToClipboard(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   }

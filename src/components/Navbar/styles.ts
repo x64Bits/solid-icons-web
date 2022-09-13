@@ -43,6 +43,7 @@ export const NavbarContainer = styled("nav")<INavbarContainerProps>`
   color: ${(props) => props.theme().colors.textPrimary};
   border: 0px;
   border-right: 1px solid ${(props) => props.theme().colors.stroke};
+  min-height: 100%;
 
   ${(props) => props.visible && responsiveNavbar(props.theme)};
 `;
@@ -90,6 +91,7 @@ export const NavItemButton = styled("button")<INavItemProps>`
   background-color: ${(props) =>
     props.active ? props.theme().colors.backgroundLighter : "transparent"};
   color: ${(props) => (props.active ? props.theme().colors.accent : "inherit")};
+  font-weight: bold;
 
   &:hover {
     background-color: ${(props) => props.theme().colors.backgroundLighter};

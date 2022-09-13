@@ -1,8 +1,23 @@
 import { IoClose } from "solid-icons/io";
-import { Accessor, createMemo, Show, useContext } from "solid-js";
+import {
+  Accessor,
+  createMemo,
+  createSignal,
+  Match,
+  Show,
+  Switch,
+  useContext,
+} from "solid-js";
 import { AppContext } from "~/store/AppContext";
+import copyToClipboard from "~/utils/copy-to-clipboard";
 import Code from "../Code";
-import { Box, Text } from "../Common/styles";
+import {
+  Box,
+  CopyActionButton,
+  CopyActionContainer,
+  Row,
+  Text,
+} from "../Common/styles";
 import Glyph from "../Icon/Glyph";
 import NextIcons from "../NextIcons";
 
@@ -36,8 +51,26 @@ const getNextIcons = (icons: string[], active: string) => {
   return resultIcons;
 };
 
+function getSvg() {
+  const svgParent = document.querySelector(
+    "#glyph-svg-container > svg"
+  ) as SVGAElement;
+  const svgOutput = svgParent.outerHTML;
+  return svgOutput;
+}
+
+function getJSX(svgContent: string, iconName: string) {
+  return /*javascript*/ `export default function ${iconName}(props) {
+    return (
+      ${svgContent}
+    );
+  }
+  `;
+}
+
 export default function IconPreview(props: IconPreviewProps) {
   const [state, { setActiveIcon }] = useContext(AppContext);
+  const [copied, setCopied] = createSignal<string>();
   const packageShortName = createMemo(() =>
     state.activeIcon.substring(0, 2).toLowerCase()
   );
@@ -65,6 +98,20 @@ export default function IconPreview(props: IconPreviewProps) {
     setActiveIcon(null);
   }
 
+  const onCopied = (type: string) =>
+    setCopied(type) && setTimeout(() => setCopied(), 2500);
+
+  function onCopySVG() {
+    copyToClipboard(getSvg());
+    onCopied("svg");
+  }
+
+  function onCopyJSX() {
+    const JSX = getJSX(getSvg(), state.activeIcon);
+    copyToClipboard(JSX);
+    onCopied("jsx");
+  }
+
   return (
     <PreviewOverlay onClick={handleClose}>
       <PreviewModal onClick={handleModalClick}>
@@ -85,9 +132,28 @@ export default function IconPreview(props: IconPreviewProps) {
               lang="jsx"
               theme="solarized-light"
             />
-            <Box mt="2em">
+            <Box mt="1em">
               <Text>Render the icon</Text>
               <Code samples={jsxSample()} lang="jsx" theme="solarized-light" />
+            </Box>
+            <Box mt="1em">
+              <Box mb="1em">
+                <Text>
+                  <Row>Use separately</Row>
+                </Text>
+              </Box>
+              <CopyActionContainer>
+                <CopyActionButton onClick={onCopyJSX}>
+                  <Switch fallback="JSX">
+                    <Match when={copied() === "jsx"}>Copied!</Match>
+                  </Switch>
+                </CopyActionButton>
+                <CopyActionButton onClick={onCopySVG}>
+                  <Switch fallback="SVG">
+                    <Match when={copied() === "svg"}>Copied!</Match>
+                  </Switch>
+                </CopyActionButton>
+              </CopyActionContainer>
             </Box>
           </PreviewCopyContainer>
         </PreviewContent>

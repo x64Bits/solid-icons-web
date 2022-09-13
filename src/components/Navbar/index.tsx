@@ -1,6 +1,6 @@
 import { NavLink } from "@solidjs/router";
 import { AiFillGithub } from "solid-icons/ai";
-import { createEffect, createSignal, Show, useContext } from "solid-js";
+import { createEffect, createSignal, For, Show, useContext } from "solid-js";
 import { AppContext } from "~/store/AppContext";
 import getMetaFile, { MetaFile } from "~/utils/get-meta-file";
 import { Box, Row } from "../Common/styles";
@@ -58,16 +58,18 @@ export default function Navbar(props: INavbarProps) {
           </Row>
         </Show>
         <NavbarTitle>Collections</NavbarTitle>
-        {metadata().map((item) => (
-          <NavLink href={`/search/package/${item.shortName}`}>
-            <NavItem onClick={handleCloseNavbar}>
-              <NavItemButton active={item.shortName === props.activePackage}>
-                <span>{item.packName}</span>
-                <span>{item.count}</span>
-              </NavItemButton>
-            </NavItem>
-          </NavLink>
-        ))}
+        <For each={metadata()}>
+          {(item) => (
+            <NavLink href={`/search/package/${item.shortName}`}>
+              <NavItem onClick={handleCloseNavbar}>
+                <NavItemButton active={item.shortName === props.activePackage}>
+                  <span>{item.packName}</span>
+                  <span>{item.count}</span>
+                </NavItemButton>
+              </NavItem>
+            </NavLink>
+          )}
+        </For>
       </NavbarContainer>
       <Show when={state.visibleNavbar}>
         <NavbarOverlay onClick={handleCloseNavbar} />
