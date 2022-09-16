@@ -2387,7 +2387,7 @@ rollup-route-manifest@^1.0.0:
   dependencies:
     route-sort "^1.0.0"
 
-rollup@^2.78.1:
+rollup@^2.78.1, rollup@^2.79.0:
   version "2.79.0"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.79.0.tgz#9177992c9f09eb58c5e56cbfa641607a12b57ce2"
   integrity sha512-x4KsrCgwQ7ZJPcFA/SUu6QVcYlO7uRLfLAy0DSA4NS2eG8japdbpM50ToH7z4iObodRYOJ0soneF0iaQRJ6zhA==
@@ -2508,6 +2508,17 @@ solid-start-node@0.1.0-alpha.101:
     polka "^1.0.0-next.22"
     rollup "^2.78.1"
     sirv "^2.0.2"
+    terser "^5.15.0"
+
+solid-start-vercel@^0.1.0-alpha.103:
+  version "0.1.0-alpha.103"
+  resolved "https://registry.yarnpkg.com/solid-start-vercel/-/solid-start-vercel-0.1.0-alpha.103.tgz#06eaa0e82441c6fc491fb2e47b1a8a117fc3a525"
+  integrity sha512-60NdOFJ7iigGWx56QH0kyMjz6rCShUpbjTfvQayMvSOMFMoHqyO1f8XooSEY/h4waOmEbGXNyIX+/n3GL1frkA==
+  dependencies:
+    "@rollup/plugin-commonjs" "^22.0.2"
+    "@rollup/plugin-json" "^4.1.0"
+    "@rollup/plugin-node-resolve" "^13.3.0"
+    rollup "^2.79.0"
     terser "^5.15.0"
 
 solid-start@0.1.0-alpha.101:
