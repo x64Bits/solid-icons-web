@@ -9,9 +9,8 @@
   "type": "module",
   "devDependencies": {
     "solid-start": "0.1.0-alpha.101",
-    "solid-start-node": "0.1.0-alpha.101",
-    "solid-start-vercel": "^0.1.0-alpha.103",
     "solid-start-netlify": "0.1.0-alpha.101",
+    "solid-start-node": "0.1.0-alpha.101",
     "typescript": "^4.8.2",
     "vite": "^3.0.9"
   },
@@ -22,6 +21,7 @@
     "shiki": "^0.11.1",
     "solid-icons": "^1.0.1",
     "solid-js": "1.5.4",
+    "solid-start-vercel": "0.1.0-alpha.101",
     "solid-styled-components": "^0.28.4",
     "undici": "^5.10.0"
   },
