@@ -5,7 +5,7 @@ import { defineConfig } from "vite";
 import path from "path";
 
 export default defineConfig({
-  plugins: [solid({ adapter: vercel({ edge: true }) })],
+  plugins: [solid({ adapter: vercel() })],
   // Local, uncomment next line
   // plugins: [solid({ adapter: node() })],
   resolve: {
