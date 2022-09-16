@@ -1,5 +1,4 @@
 import { AiFillHeart } from "solid-icons/ai";
-import { Bs1SquareFill } from "solid-icons/bs";
 import { SiPnpm, SiYarn, SiNpm } from "solid-icons/si";
 import { onMount, useContext } from "solid-js";
 import Gradient from "~/assets/Gradient";
@@ -16,7 +15,6 @@ import {
   ContentMain,
   ContentTitle,
   GradientContainer,
-  HeartWrapper,
   SearchbarContent,
   SearchbarWrapper,
 } from "./index.styles";

@@ -1,5 +1,5 @@
 import { getHighlighter, Lang, setCDN, Theme } from "shiki";
-import { createEffect, createMemo, createSignal, Show } from "solid-js";
+import { createEffect, createSignal, Show } from "solid-js";
 import { Flex, PulseView } from "../Common/styles";
 import { HighlighterContainer } from "./styles";
 

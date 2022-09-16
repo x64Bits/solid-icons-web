@@ -4,13 +4,14 @@ import {
   createSignal,
   For,
   JSX,
+  lazy,
   Match,
   Show,
   Suspense,
   Switch,
 } from "solid-js";
 import { BiSolidCopy } from "solid-icons/bi";
-import Highlighter from "./Highlighter";
+// import Highlighter from "./Highlighter";
 
 import { Box, Row } from "../Common/styles";
 
@@ -24,6 +25,8 @@ import {
 } from "./styles";
 import Tab from "./Tab";
 import copyToClipboard from "~/utils/copy-to-clipboard";
+
+const Highlighter = lazy(() => import("./Highlighter"));
 
 export interface CodeSample {
   title?: string;
