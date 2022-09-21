@@ -19,7 +19,7 @@ export const IconList = styled("section")`
 
   & button:hover {
     background-color: ${(props) => props.theme().colors.backgroundLighter};
-    border-color: ${(props) => props.theme().colors.surface};
+    border-color: ${(props) => props.theme().colors.stroke};
   }
 
   @media (max-width: ${Breakpoints.sm}) {
