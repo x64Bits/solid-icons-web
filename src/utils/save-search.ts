@@ -2,7 +2,7 @@ import createLocalStorage from "../hooks/create-local-storage";
 
 export default function saveSearch(term: string) {
   const [currentSearches, setCurrentSearches] = createLocalStorage<string[]>(
-    "recentlySearched",
+    "searches",
     []
   );
 
