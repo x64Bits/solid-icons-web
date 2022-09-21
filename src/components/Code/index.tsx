@@ -1,4 +1,3 @@
-import { Lang, Theme } from "shiki";
 import {
   createMemo,
   createSignal,
@@ -11,7 +10,6 @@ import {
   Switch,
 } from "solid-js";
 import { BiSolidCopy } from "solid-icons/bi";
-// import Highlighter from "./Highlighter";
 
 import { Box, Row } from "../Common/styles";
 
@@ -25,8 +23,7 @@ import {
 } from "./styles";
 import Tab from "./Tab";
 import copyToClipboard from "~/utils/copy-to-clipboard";
-
-const Highlighter = lazy(() => import("./Highlighter"));
+import { Lang } from "./Highlighter";
 
 export interface CodeSample {
   title?: string;
@@ -37,7 +34,6 @@ export interface CodeSample {
 export interface ICodeProps {
   samples: CodeSample[];
   lang?: Lang;
-  theme?: Theme;
   header?: boolean;
   locs?: boolean;
 }
@@ -46,6 +42,8 @@ export default function Code(props: ICodeProps) {
   const [activeTab, setActiveTab] = createSignal(0);
   const [copied, setCopied] = createSignal(false);
   const activeSample = createMemo(() => props.samples[activeTab()].content);
+
+  const Highlighter = lazy(() => import("./Highlighter"));
 
   function handleCopy() {
     const text = activeSample();
@@ -85,9 +83,7 @@ export default function Code(props: ICodeProps) {
         </Show>
         <CodeBody>
           <Suspense>
-            <Highlighter lang={props.lang} theme={props.theme}>
-              {activeSample()}
-            </Highlighter>
+            <Highlighter lang={props.lang}>{activeSample()}</Highlighter>
           </Suspense>
           <CopyContainer onClick={handleCopy}>
             <Switch>

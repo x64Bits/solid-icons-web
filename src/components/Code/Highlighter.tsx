@@ -1,32 +1,38 @@
-import { getHighlighter, Lang, setCDN, Theme } from "shiki";
-import { createEffect, createSignal, Show } from "solid-js";
+import Prism from "prismjs";
+import "prismjs/components/prism-jsx";
+import "prismjs/components/prism-bash";
+import { createEffect, createSignal, Show, useContext } from "solid-js";
 import { Flex, PulseView } from "../Common/styles";
 import { HighlighterContainer } from "./styles";
+import { AppContext } from "~/store/AppContext";
+
+export type Theme = "dark" | "light";
+export type Lang = "jsx" | "bash";
 
 interface IHighlighterProps {
   children: string;
   lang: Lang;
-  theme?: Theme;
 }
 
-const getCode = async (code: string, theme: Theme, lang: Lang) => {
-  // Local
-  // setCDN("/node_modules/shiki/");
-  setCDN("https://unpkg.com/shiki/");
+const getCode = (code: string, lang: Lang) => {
+  const formatCode = Prism.highlight(code, Prism.languages[lang], lang);
 
-  return await getHighlighter({
-    theme: theme || "solarized-light",
-    langs: [lang],
-  }).then((highlighter) => {
-    return highlighter.codeToHtml(code, { lang: lang });
-  });
+  setTimeout(() => Prism.highlightAll(), 0);
+
+  return formatCode;
 };
 
 export default function Highlighter(props: IHighlighterProps) {
   const [html, setHtml] = createSignal<string>();
+  const [state] = useContext(AppContext);
 
-  createEffect(async () => {
-    setHtml(await getCode(props.children, props.theme, props.lang));
+  createEffect((prev) => {
+    if (props.children !== prev) {
+      const result = getCode(props.children, props.lang);
+      setHtml(result);
+    }
+
+    return props.children;
   });
 
   return (
@@ -39,7 +45,14 @@ export default function Highlighter(props: IHighlighterProps) {
           </Flex>
         }
       >
-        <HighlighterContainer innerHTML={html()} />
+        <pre>
+          <HighlighterContainer
+            class={`language-${props.lang} ${
+              state.darkMode ? "dark" : "light"
+            }`}
+            innerHTML={html()}
+          />
+        </pre>
       </Show>
     </>
   );

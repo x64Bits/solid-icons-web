@@ -8,18 +8,20 @@
   },
   "type": "module",
   "devDependencies": {
+    "@solidjs/meta": "^0.28.0",
+    "@solidjs/router": "^0.4.3",
     "solid-start": "0.1.0-alpha.101",
     "solid-start-netlify": "0.1.0-alpha.101",
     "solid-start-node": "0.1.0-alpha.101",
     "solid-start-vercel": "0.1.0-alpha.101",
-    "@solidjs/meta": "^0.28.0",
-    "@solidjs/router": "^0.4.3",
+    "solid-start-static": "0.1.0-alpha.101",
     "typescript": "^4.8.2",
     "undici": "^5.10.0",
     "vite": "^3.0.9"
   },
   "dependencies": {
     "@solid-primitives/intersection-observer": "^2.0.1",
+    "prismjs": "^1.29.0",
     "shiki": "^0.11.1",
     "solid-icons": "^1.0.1",
     "solid-js": "1.5.4",

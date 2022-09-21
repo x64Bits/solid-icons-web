@@ -42,7 +42,7 @@ const basicUseSample = [
 ];
 
 export default function Home() {
-  const [state, { setVisibleNavSearch }] = useContext(AppContext);
+  const [_state, { setVisibleNavSearch }] = useContext(AppContext);
   onMount(() => {
     setVisibleNavSearch(false);
   });
@@ -72,23 +72,11 @@ export default function Home() {
                 <Box mt="3em">
                   <Text>Let's start by installing the library</Text>
                 </Box>
-                <Code
-                  samples={installSamples}
-                  lang="css"
-                  theme={state.darkMode ? "github-dark" : "github-light"}
-                  header
-                  locs
-                />
+                <Code samples={installSamples} lang="bash" header locs />
                 <Box mt="3em">
                   <Text>Basic use</Text>
                 </Box>
-                <Code
-                  samples={basicUseSample}
-                  lang="jsx"
-                  theme={state.darkMode ? "github-dark" : "github-light"}
-                  header
-                  locs
-                />
+                <Code samples={basicUseSample} lang="jsx" header locs />
               </Box>
             </ContentContainer>
           </ContentMain>

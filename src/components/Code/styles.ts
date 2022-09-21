@@ -140,6 +140,7 @@ export const TabsRow = styled(Row)<IFlexProps>`
   }
 `;
 
-export const HighlighterContainer = styled("div")`
+export const HighlighterContainer = styled("code")`
   max-width: 100%;
+  color: ${(props) => props.theme().colors.textPrimary} !important;
 `;
