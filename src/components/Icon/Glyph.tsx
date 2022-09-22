@@ -23,7 +23,9 @@ export default function Glyph(props: IGlyphProps) {
   createEffect(async () => {
     const name = (props && props.name) || "";
 
-    const iconTree = await import(getPath(name)).then((i) => i.default);
+    const iconTree = await import(getPath(name) /* @vite-ignore */).then(
+      (i) => i.default
+    );
     setIconString(iconTree);
   });
   return (

@@ -38,6 +38,7 @@ export const NavbarContainer = styled("nav")<INavbarContainerProps>`
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
+  padding-bottom: 1rem;
   font-size: 1.4em;
   position: relative;
   color: ${(props) => props.theme().colors.textPrimary};

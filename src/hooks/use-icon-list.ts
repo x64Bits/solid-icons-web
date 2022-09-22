@@ -1,12 +1,9 @@
 import { Accessor, createEffect, createSignal } from "solid-js";
 
-const env = import.meta.env;
-const SEARCH_SRC = env.DEV ? "/public" : "";
-
 type TReturnProps = [Accessor<Array<string>>, Accessor<boolean>];
 
 function getSearchFile() {
-  return import(`${SEARCH_SRC}/search.js`).then((i) => i.default.icons);
+  return import("../assets/search.js" as any).then((i) => i.default.icons);
 }
 
 export default function useIconList(term: Accessor<string>): TReturnProps {

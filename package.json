@@ -1,7 +1,9 @@
 {
   "name": "solid-icons-web",
-  "version": "0.0.0",
-  "description": "",
+  "description": "Solid Icons explorer icons website",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "start": "vite",
     "dev": "vite",

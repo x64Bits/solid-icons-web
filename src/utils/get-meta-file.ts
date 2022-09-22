@@ -1,6 +1,3 @@
-const env = import.meta.env;
-const META_PATH = env.DEV ? "/public/meta.js" : "/meta.js";
-
 export interface MetaFile {
   shortName: string;
   packName: string;
@@ -11,6 +8,6 @@ export interface MetaFile {
 }
 
 const getMetaFile = async (): Promise<MetaFile[]> =>
-  await import(META_PATH).then((glob) => glob.default);
+  await import("../assets/meta.js" as any).then((glob) => glob.default);
 
 export default getMetaFile;
