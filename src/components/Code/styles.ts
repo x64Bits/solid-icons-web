@@ -77,7 +77,7 @@ export const CodeBody = styled(Box)<ICodeBodyProps>`
   position: relative;
   min-height: 18px;
   display: flex;
-  flex-direction: ${(props) => (props.multiline ? "column" : "row")};
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
