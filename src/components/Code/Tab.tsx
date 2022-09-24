@@ -4,7 +4,7 @@ import { Box, Row } from "../Common/styles";
 import { TabContainer } from "./styles";
 
 interface ITabProps {
-  title: string;
+  title?: string;
   icon?: JSX.Element;
   activeTab: number;
   index: number;

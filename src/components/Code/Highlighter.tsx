@@ -6,7 +6,6 @@ import { Flex, PulseView } from "../Common/styles";
 import { HighlighterContainer } from "./styles";
 import { AppContext } from "~/store/AppContext";
 
-export type Theme = "dark" | "light";
 export type Lang = "jsx" | "bash";
 
 interface IHighlighterProps {

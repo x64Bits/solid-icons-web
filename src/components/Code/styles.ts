@@ -11,6 +11,22 @@ interface ICodeFrameProps {
   locs?: boolean;
 }
 
+interface ICopyContainerProps {
+  multiline?: boolean;
+}
+
+interface ICodeBodyProps {
+  multiline?: boolean;
+}
+
+const copyMultilineStyles = /*css*/ `
+  & {
+    position: absolute;
+    right: 0.8em;
+    bottom: 0.5em;
+  }
+`;
+
 const locs = /*css*/ `
   & code {
     counter-reset: step;
@@ -56,10 +72,14 @@ export const CodeHeader = styled(Box)<IBoxProps>`
   margin-bottom: 0.2em;
 `;
 
-export const CodeBody = styled(Box)`
+export const CodeBody = styled(Box)<ICodeBodyProps>`
   padding: 1em;
   position: relative;
   min-height: 18px;
+  display: flex;
+  flex-direction: ${(props) => (props.multiline ? "column" : "row")};
+  justify-content: space-between;
+  align-items: center;
 
   & pre {
     background-color: ${(props) => props.theme().colors.background} !important;
@@ -89,7 +109,7 @@ export const CodeBody = styled(Box)`
   }
 `;
 
-export const CopyContainer = styled("button")`
+export const CopyContainer = styled("button")<ICopyContainerProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,10 +117,9 @@ export const CopyContainer = styled("button")`
   color: ${(props) => props.theme().colors.accent};
   border-radius: 5px;
   padding: 0.5em;
-  position: absolute;
-  right: 0.8em;
-  bottom: 0.5em;
   cursor: pointer;
+
+  ${(props) => props.multiline && copyMultilineStyles}
 `;
 
 export const TabContainer = styled("button")<TabContainerProps>`

@@ -33,7 +33,7 @@ export interface CodeSample {
 
 export interface ICodeProps {
   samples: CodeSample[];
-  lang?: Lang;
+  lang: Lang;
   header?: boolean;
   locs?: boolean;
 }
@@ -42,6 +42,11 @@ export default function Code(props: ICodeProps) {
   const [activeTab, setActiveTab] = createSignal(0);
   const [copied, setCopied] = createSignal(false);
   const activeSample = createMemo(() => props.samples[activeTab()].content);
+  const isMultiline = createMemo(() => {
+    const sampleLocs = activeSample().split(/\r\n|\r|\n/).length;
+
+    return sampleLocs >= 2;
+  });
 
   const Highlighter = lazy(() => import("./Highlighter"));
 
@@ -81,11 +86,11 @@ export default function Code(props: ICodeProps) {
             </Row>
           </CodeHeader>
         </Show>
-        <CodeBody>
+        <CodeBody multiline={isMultiline()}>
           <Suspense>
             <Highlighter lang={props.lang}>{activeSample()}</Highlighter>
           </Suspense>
-          <CopyContainer onClick={handleCopy}>
+          <CopyContainer onClick={handleCopy} multiline={isMultiline()}>
             <Switch>
               <Match when={!copied()}>
                 <BiSolidCopy size="1.2em" />
