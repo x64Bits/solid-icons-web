@@ -1,7 +1,9 @@
 import { Route, Routes } from "@solidjs/router";
+
 import Home from "./pages/home";
 import PackageRoute from "./pages/package";
 import SearchRoute from "./pages/search";
+import NoFound from "./pages/404";
 
 export default function Router() {
   return (
@@ -9,6 +11,7 @@ export default function Router() {
       <Route path="/" component={Home} />
       <Route path="/search/:term" component={SearchRoute} />
       <Route path="/search/package/:shortName" element={PackageRoute} />
+      <Route path="/*" component={NoFound} />
     </Routes>
   );
 }
