@@ -1,5 +1,5 @@
 import { createContext, createEffect, JSX } from "solid-js";
-import { createStore } from "solid-js/store";
+import { createStore, StoreSetter } from "solid-js/store";
 import createLocalStorage from "~/hooks/create-local-storage";
 import { darkModeScrollbars } from "~/utils/scrollbar-theme";
 
@@ -9,7 +9,7 @@ interface IAppContextProviderProps {
 
 export type IAppContextState = {
   readonly visibleNavbar: boolean;
-  readonly activeIcon: null | string;
+  readonly activeIcon?: string | null;
   readonly darkMode: boolean;
   readonly visibleNavSearch: boolean;
 };
@@ -18,7 +18,7 @@ export type IAppContextValue = [
   state: IAppContextState,
   actions: {
     setVisibleNavbar: (newValue: boolean) => void;
-    setActiveIcon: (title: string) => void;
+    setActiveIcon: (title: string | null) => void;
     toggleDarkMode: (newValue: boolean) => void;
     setVisibleNavSearch: (newValue: boolean) => void;
   }
@@ -57,13 +57,16 @@ export default function AppContextProvider(props: IAppContextProviderProps) {
   function setVisibleNavbar(newValue: boolean) {
     setState("visibleNavbar", newValue);
   }
-  function setActiveIcon(iconName: string) {
+
+  function setActiveIcon(iconName: any) {
     setState("activeIcon", iconName);
   }
+
   function toggleDarkMode(newValue: boolean) {
     setState("darkMode", newValue);
     setDarkMode(newValue);
   }
+
   function setVisibleNavSearch(newValue: boolean) {
     setState("visibleNavSearch", newValue);
   }

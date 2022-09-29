@@ -53,7 +53,7 @@ const getNextIcons = (icons: string[], active: string) => {
 
 function getSvg() {
   const svgParent = document.querySelector(
-    "#glyph-svg-container > svg"
+    "#preview-container svg"
   ) as SVGAElement;
   const svgOutput = svgParent.outerHTML;
   return svgOutput;
@@ -71,11 +71,11 @@ function getJSX(svgContent: string, iconName: string) {
 export default function IconPreview(props: IconPreviewProps) {
   const [state, { setActiveIcon }] = useContext(AppContext);
   const [copied, setCopied] = createSignal<string>();
-  const packageShortName = createMemo(() =>
-    state.activeIcon.substring(0, 2).toLowerCase()
+  const packageShortName = createMemo(
+    () => state.activeIcon && state.activeIcon.substring(0, 2).toLowerCase()
   );
   const nextIcons = createMemo(() =>
-    getNextIcons(props.icons(), state.activeIcon)
+    getNextIcons(props.icons(), state.activeIcon || "")
   );
 
   const importSamples = createMemo(() => [
@@ -95,7 +95,7 @@ export default function IconPreview(props: IconPreviewProps) {
   const handleModalClick = (e: MouseEvent) => e.stopPropagation();
 
   function handleClose() {
-    setActiveIcon(null);
+    setActiveIcon(undefined);
   }
 
   const onCopied = (type: string) =>
@@ -107,7 +107,7 @@ export default function IconPreview(props: IconPreviewProps) {
   }
 
   function onCopyJSX() {
-    const JSX = getJSX(getSvg(), state.activeIcon);
+    const JSX = getJSX(getSvg(), state.activeIcon || "");
     copyToClipboard(JSX);
     onCopied("jsx");
   }
@@ -119,22 +119,18 @@ export default function IconPreview(props: IconPreviewProps) {
           <IoClose />
         </CloseButton>
         <PreviewContent>
-          <PreviewIconContainer>
+          <PreviewIconContainer id="preview-container">
             <Text>{state.activeIcon}</Text>
             <PreviewIconWrapper>
-              <Glyph name={state.activeIcon} />
+              <Glyph name={state.activeIcon || ""} />
             </PreviewIconWrapper>
           </PreviewIconContainer>
           <PreviewCopyContainer>
             <Text>Import icon from library</Text>
-            <Code
-              samples={importSamples()}
-              lang="jsx"
-              theme="solarized-light"
-            />
+            <Code samples={importSamples()} lang="jsx" />
             <Box mt="1em">
               <Text>Render the icon</Text>
-              <Code samples={jsxSample()} lang="jsx" theme="solarized-light" />
+              <Code samples={jsxSample()} lang="jsx" />
             </Box>
             <Box mt="1em">
               <Box mb="1em">
