@@ -2,7 +2,9 @@ import { IconTemplate, IconTree } from "solid-icons/lib/index.js";
 import { createEffect, createSignal } from "solid-js";
 import { IconPlaceholder } from "./styles";
 
-const JS_DELIVR = "https://cdn.jsdelivr.net/npm/solid-icons-all";
+const JS_DELIVR = import.meta.env.PROD
+  ? "https://cdn.jsdelivr.net/npm/solid-icons-all"
+  : "/public/dist_all";
 const DEFAULT_ICON = "BsSquareFill";
 
 interface IGlyphProps {
