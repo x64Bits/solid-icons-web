@@ -30,6 +30,7 @@ import {
   PreviewModal,
   PreviewOverlay,
 } from "./styles";
+import createKeypress from "~/hooks/create-keypress";
 
 interface IconPreviewProps {
   icons: Accessor<string[]>;
@@ -49,6 +50,16 @@ const getNextIcons = (icons: string[], active: string) => {
   }
 
   return resultIcons;
+};
+
+const getNextIcon = (icons: string[], active: string) => {
+  const iconIndex = icons.indexOf(active) + 1;
+  return icons[iconIndex];
+};
+
+const getPrevIcon = (icons: string[], active: string) => {
+  const iconIndex = icons.indexOf(active) - 1;
+  return icons[iconIndex];
 };
 
 function getSvg() {
@@ -77,6 +88,13 @@ export default function IconPreview(props: IconPreviewProps) {
   const nextIcons = createMemo(() =>
     getNextIcons(props.icons(), state.activeIcon || "")
   );
+  createKeypress(["Escape", "Esc"], () => setActiveIcon(null));
+  createKeypress(["Left", "ArrowLeft"], () =>
+    setActiveIcon(getPrevIcon(props.icons(), state.activeIcon || ""))
+  );
+  createKeypress(["Right", "ArrowRight"], () =>
+    setActiveIcon(getNextIcon(props.icons(), state.activeIcon || ""))
+  );
 
   const importSamples = createMemo(() => [
     {
@@ -95,7 +113,7 @@ export default function IconPreview(props: IconPreviewProps) {
   const handleModalClick = (e: MouseEvent) => e.stopPropagation();
 
   function handleClose() {
-    setActiveIcon(undefined);
+    setActiveIcon(null);
   }
 
   const onCopied = (type: string) =>
