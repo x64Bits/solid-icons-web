@@ -48,7 +48,7 @@ export type TColors = keyof IColors;
 
 export interface ITextProps {
   size?: string;
-  weight?: "normal" | "bold" | "light" | "300" | "400" | "700";
+  weight?: "normal" | "bold" | "light" | "300" | "400" | "500" | "700";
   color?: TColors;
   align?: "left" | "center" | "right";
 }

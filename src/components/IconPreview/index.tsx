@@ -138,7 +138,7 @@ export default function IconPreview(props: IconPreviewProps) {
         </CloseButton>
         <PreviewContent>
           <PreviewIconContainer id="preview-container">
-            <Text>{state.activeIcon}</Text>
+            <Text weight="500">{state.activeIcon}</Text>
             <PreviewIconWrapper>
               <Glyph name={state.activeIcon || ""} />
             </PreviewIconWrapper>

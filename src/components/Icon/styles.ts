@@ -5,11 +5,11 @@ import { IPulseView } from "../Common/types";
 export const IconContainer = styled("button")`
   aspect-ratio: 1/1;
   overflow: hidden;
-  border-radius: ${(props) => props.theme().rounded.small};
+  border-radius: ${(props) => props.theme?.().rounded.small};
   border: 1px solid;
   border-color: transparent;
   padding: 0.5em;
-  color: ${(props) => props.theme().colors.textPrimary};
+  color: ${(props) => props.theme?.().colors.textPrimary};
   cursor: pointer;
 
   & span {
@@ -28,7 +28,7 @@ export const IconContainer = styled("button")`
 `;
 
 export const IconPlaceholder = styled(PulseView)<IPulseView>`
-  color: ${(props) => props.color || props.theme().colors.surface};
+  color: ${(props) => props.color || props.theme?.().colors.surface};
   margin: 0 auto;
   border-radius: 6px;
 `;

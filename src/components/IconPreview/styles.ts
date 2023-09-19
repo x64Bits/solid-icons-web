@@ -21,7 +21,7 @@ export const PreviewOverlay = styled("div")`
   height: 100vh;
   background-color: red;
   z-index: 999;
-  background-color: ${(props) => props.theme().colors.overlay};
+  background-color: ${(props) => props.theme?.().colors.overlay};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,10 +36,10 @@ export const PreviewOverlay = styled("div")`
 
 export const PreviewModal = styled("div")`
   width: 60%;
-  background-color: ${(props) => props.theme().colors.background};
-  border: 1px solid ${(props) => props.theme().colors.strokeAccent};
-  box-shadow: ${(props) => props.theme().shadow.unfocus};
-  border-radius: ${(props) => props.theme().rounded.medium};
+  background-color: ${(props) => props.theme?.().colors.background};
+  border: 1px solid ${(props) => props.theme?.().colors.strokeAccent};
+  box-shadow: ${(props) => props.theme?.().shadow.unfocus};
+  border-radius: calc(${(props) => props.theme?.().rounded.medium} + 1em);
   overflow: hidden;
   position: relative;
   animation: ${showAnimation} 250ms ease;
@@ -52,9 +52,9 @@ export const PreviewModal = styled("div")`
 `;
 
 export const CloseButton = styled("button")`
-  background-color: ${(props) => props.theme().colors.surfaceLighter};
-  color: ${(props) => props.theme().colors.textSecondary};
-  border: 1px solid ${(props) => props.theme().colors.strokeAccent};
+  background-color: ${(props) => props.theme?.().colors.surfaceLighter};
+  color: ${(props) => props.theme?.().colors.textSecondary};
+  border: 1px solid ${(props) => props.theme?.().colors.strokeAccent};
   border-top: 0;
   border-right: 0;
   font-size: 1.6em;
@@ -73,7 +73,7 @@ export const CloseButton = styled("button")`
 export const PreviewContent = styled("div")`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 1.5em;
+  /* margin-top: 1.5em; */
   padding: 2em;
   padding-bottom: 2em;
 
@@ -90,15 +90,27 @@ export const PreviewContent = styled("div")`
 
 export const PreviewIconContainer = styled("div")`
   width: 100%;
-  border: 1px solid ${(props) => props.theme().colors.strokeAccent};
+  border: 1px solid ${(props) => props.theme?.().colors.strokeAccent};
   justify-self: center;
-  border-radius: ${(props) => props.theme().rounded.medium};
+  border-radius: 1em;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   padding-top: 1em;
   grid-column: span 1 / span 3;
+
+  background-image: linear-gradient(
+      0deg,
+      ${(props) => props.theme?.().colors.stroke}6e 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      ${(props) => props.theme?.().colors.stroke}6e 1px,
+      transparent 1px
+    );
+  background-size: 15px 15px;
 
   & span {
     font-size: 1.2em;
@@ -111,7 +123,7 @@ export const PreviewIconContainer = styled("div")`
   & svg {
     width: 200px;
     height: 200px;
-    border: ${(props) => props.theme().colors.textPrimary};
+    border: ${(props) => props.theme?.().colors.textPrimary};
   }
 
   @media (max-width: ${Breakpoints.md}) {

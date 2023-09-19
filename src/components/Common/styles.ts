@@ -25,7 +25,7 @@ export const Text = styled("span")<ITextProps>`
   font-weight: ${(props) => props.weight || "400"};
   font-size: ${(props) => props.size || "16px"};
   color: ${(props) =>
-    props.theme().colors[props.color] || props.theme().colors.textPrimary};
+    props.theme?.().colors[props.color] || props.theme?.().colors.textPrimary};
   text-align: ${(props) => props.align || "left"};
 
   & b {
