@@ -17,7 +17,7 @@ export const ContentContainer = styled("div")`
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 15vh;
+  margin-top: 10vh;
   font-weight: 700;
   flex-direction: column;
   padding: 0 100px;
@@ -84,5 +84,37 @@ export const SearchbarWrapper = styled("div")<ISearchbarWrapperProps>`
     & {
       width: 100%;
     }
+  }
+`;
+
+export const InformationBox = styled("div")`
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 28px;
+  color: ${(props) => props.theme().colors.textPrimary};
+  backdrop-filter: blur(12px);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 28px;
+  white-space-collapse: collapse;
+  text-wrap: nowrap;
+  padding: 0px 12px;
+  background: ${(props) => props.theme().colors.backgroundLighter};
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${(props) => props.theme().colors.stroke};
+  border-image: initial;
+  border-radius: 7px;
+  transition: background 260ms ease 0s, width;
+
+  &:hover {
+    background: ${(props) => props.theme().colors.surfaceLighter};
+    cursor: pointer;
+  }
+
+  b {
+    font-weight: 800;
+    margin: 0 0.1em;
   }
 `;
